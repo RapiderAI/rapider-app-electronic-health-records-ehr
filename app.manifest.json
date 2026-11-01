@@ -1,5 +1,138 @@
 {
-  "pages": [],
+  "pages": [
+    {
+      "name": "Provider Clinical Cockpit",
+      "route": "clinical-cockpit",
+      "htmlFilePath": "pages/clinical-cockpit/clinical-cockpit.html",
+      "title": "Provider Clinical Cockpit",
+      "group": "Clinical Workspace",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 1,
+      "developmentDetails": "Today's scheduled/roomed patients, unsigned HltEncounterNote backlog, unacknowledged CRITICAL_PANIC lab KPI badge, co-sign queue count, and Care Gap closure rate."
+    },
+    {
+      "name": "Master Patient Directory",
+      "route": "patient-directory",
+      "htmlFilePath": "pages/patient-directory/patient-directory.html",
+      "title": "Master Patient Directory",
+      "group": "Clinical Workspace",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 2,
+      "developmentDetails": "Searchable HltPatient MPI registry (MRN, Name, DOB, Restricted VIP badge, <rapider-phone-input> filter/edit), duplicate-merge indicator, #activeFilterTagsBar."
+    },
+    {
+      "name": "Clinical Encounters & Sign-Off",
+      "route": "encounters-board",
+      "htmlFilePath": "pages/encounters-board/encounters-board.html",
+      "title": "Clinical Encounters & Sign-Off",
+      "group": "Clinical Workspace",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 3,
+      "developmentDetails": "<rapider-kanban> + table view of HltEncounterNote lifecycle (OPEN -> PENDING_COSIGN -> SIGNED_LOCKED -> AMENDED), specialty/provider filters, same-day closure tracker."
+    },
+    {
+      "name": "Medications & e-Prescribing",
+      "route": "medications-erx",
+      "htmlFilePath": "pages/medications-erx/medications-erx.html",
+      "title": "Medications & e-Prescribing",
+      "group": "Orders & Medications",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 4,
+      "developmentDetails": "Active HltMedicationPrescription queue, renewal requests, drug-allergy/drug-drug CDS severity badges, DEA EPCS controlled-substance status pills, pharmacy transmission log."
+    },
+    {
+      "name": "Lab & Imaging Orders (CPOE)",
+      "route": "diagnostic-orders",
+      "htmlFilePath": "pages/diagnostic-orders/diagnostic-orders.html",
+      "title": "Lab & Imaging Orders (CPOE)",
+      "group": "Orders & Medications",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 5,
+      "developmentDetails": "HltDiagnosticOrderResult order & result inbox, abnormal/panic result filter pills (NORMAL, ABNORMAL, CRITICAL_PANIC), discrete LOINC trend sparklines, clinician sign-off action."
+    },
+    {
+      "name": "Problems & Allergy Safety",
+      "route": "problems-allergies",
+      "htmlFilePath": "pages/problems-allergies/problems-allergies.html",
+      "title": "Problems & Allergy Safety",
+      "group": "Orders & Medications",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 6,
+      "developmentDetails": "Cross-patient clinical safety registry of HltProblemCondition (SNOMED/ICD-10) and HltAllergyIntolerance (RxNorm criticality), unverified NKA audit filter, chronic disease cohort filter."
+    },
+    {
+      "name": "Care Plans & Quality Gaps",
+      "route": "care-plans-quality",
+      "htmlFilePath": "pages/care-plans-quality/care-plans-quality.html",
+      "title": "Care Plans & Quality Gaps",
+      "group": "Population & Interoperability",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 7,
+      "developmentDetails": "HltCarePlanQualityGap registry for HEDIS/MIPS preventive screenings, immunization CVX compliance, overdue chronic follow-ups, and 1-click outreach trigger to #155."
+    },
+    {
+      "name": "FHIR & HIE Exchange Hub",
+      "route": "fhir-interoperability",
+      "htmlFilePath": "pages/fhir-interoperability/fhir-interoperability.html",
+      "title": "FHIR & HIE Exchange Hub",
+      "group": "Population & Interoperability",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 8,
+      "developmentDetails": "Inbound/outbound HltFhirExchangeBreakGlassLog monitor (HL7 FHIR R4 bundles, C-CDA transitions of care, Hospital ADT discharge feeds), outside-record reconciliation status."
+    },
+    {
+      "name": "Clinical Audit & Break-Glass",
+      "route": "hipaa-break-glass",
+      "htmlFilePath": "pages/hipaa-break-glass/hipaa-break-glass.html",
+      "title": "Clinical Audit & Break-Glass",
+      "group": "Population & Interoperability",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 9,
+      "developmentDetails": "HIPAA minimum-necessary access governance, emergency Break-the-Glass event log, ONC HTI-1 DSI algorithm transparency catalog, and Privacy Officer review status."
+    },
+    {
+      "name": "Patient Longitudinal Chart 360",
+      "route": "patient-chart-360",
+      "htmlFilePath": "pages/patient-chart-360/patient-chart-360.html",
+      "title": "Patient Longitudinal Chart 360",
+      "group": "(None)",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": false,
+      "order": 10,
+      "developmentDetails": "Split-pane clinical facesheet (HltPatient banner with allergy/code-status alerts, problems, meds, vitals Decimal128 charts, labs, care plans, anchored projectChannelMessage Chart Q&A) + Break-the-Glass gate if restricted."
+    },
+    {
+      "name": "SOAP Encounter & Ambient Scribe",
+      "route": "encounter-charting",
+      "htmlFilePath": "pages/encounter-charting/encounter-charting.html",
+      "title": "SOAP Encounter & Ambient Scribe",
+      "group": "(None)",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": false,
+      "order": 11,
+      "developmentDetails": "Active encounter workspace (HltEncounterNote): vitals entry, SOAP/specialty macros, AI_DRAFT_UNVERIFIED side-by-side clinician review & accept controls, ICD-10/CPT coder, Sign & Lock / Addendum modal."
+    },
+    {
+      "name": "New CPOE Order / eRx Drawer",
+      "route": "order-rx-drawer",
+      "htmlFilePath": "pages/order-rx-drawer/order-rx-drawer.html",
+      "title": "New CPOE Order / eRx Drawer",
+      "group": "(None)",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": false,
+      "order": 12,
+      "developmentDetails": "Sliding drawer for placing lab/imaging orders or e-prescriptions with live CDS drug-allergy/interaction checks, <rapider-phone-input> pharmacy callback, finally button reset, and auto-close on Save/Cancel."
+    }
+  ],
   "name": "Rapider Electronic Health Records",
   "key": "electronic-health-records-ehr",
   "route": "electronic-health-records-ehr",
@@ -13,7 +146,7 @@
   "isPublic": true,
   "isPaid": false,
   "price": "Free",
-  "status": "data-models-in-progress",
+  "status": "app-metadata-completed",
   "developerName": "Tansel Ozkusaksiz",
   "createdById": "e995822b-f88d-40ef-86df-0f07cb1149d8",
   "createdBy": "Tansel Ozkusaksiz",
@@ -2813,5 +2946,139 @@
   "scopeOfWork": "<!-- Rapider Official App SOW & Specification | App #151: Electronic Health Records (EHR) (electronic-health-records-ehr) | Domain: HLT -->\n# #151 Electronic Health Records (EHR) (`electronic-health-records-ehr`) — Scope of Work (SOW)\n\n- **App Number:** `#151`\n- **App Key:** `electronic-health-records-ehr`\n- **Suite / Domain:** Healthcare & Wellness (`HLT` — `Hlt*`)\n- **Representative Benchmark (`P1`):** athenaOne (athenahealth)\n- **Combined Feature Set Reference:** [../combined-features/151-electronic-health-records-ehr-features.md](../combined-features/151-electronic-health-records-ehr-features.md)\n- **Status:** Official Architecture & Implementation Specification\n\n---\n\n## 1. Executive Outcome & Target Audience\n\n**Rapider Electronic Health Records (`electronic-health-records-ehr`)** eliminates clinician \"pajama-time\" charting fatigue, fragmented paper/fax clinical histories, dangerous medication-allergy blind spots, and unacknowledged diagnostic results. It serves as the authoritative clinical system of record and Master Patient Index (`HltPatient`) for the Rapider `HLT` suite (`#151`–`#155`), combining single-screen longitudinal charting, CPOE lab/imaging loops, e-Prescribing safety checks, HL7 FHIR R4 / C-CDA interoperability, and clinician-reviewed ambient AI documentation.\n\n### SME Fast-Path vs. Enterprise Progressive Disclosure\n- **SME Fast-Path Defaults (1–15 Clinician Independent Practices & Outpatient Clinics):** Register or open a patient chart (`HltPatient`), view the single-screen Chart 360 facesheet, document a structured SOAP encounter (`HltEncounterNote`) with vitals and dot-phrases in under 3 minutes, run automatic drug-allergy checks on prescriptions (`HltMedicationPrescription`), sign off discrete lab results (`HltDiagnosticOrderResult`), and auto-emit coded ICD-10-CM / CPT encounter summaries to `#154` without complex hospital hierarchy setup.\n- **Enterprise Progressive Disclosure (Multi-Specialty Groups, FQHC Networks & Ambulatory Health Systems):** Progressively unlock resident/APP supervising physician co-signature queues, specialty flowsheet & behavioral scoring instruments (PHQ-9/GAD-7), DEA two-factor EPCS workflows, HL7 FHIR R4 US Core & TEFCA/C-CDA outside record reconciliation (`HltFhirExchangeBreakGlassLog`), ONC HTI-1 Decision Support Intervention (DSI) model transparency cards, and HIPAA \"Break-the-Glass\" VIP/behavioral chart locks.\n\n### Measurable Business & Clinical Outcomes\n1. **>= 35% Reduction in Per-Encounter Documentation Time** and **>= 85% Same-Day Chart Closure** via split-pane Chart 360 charting, reusable specialty macros, and clinician-reviewed ambient SOAP drafts.\n2. **100% Point-of-Prescribing Medication Safety Screening** across active `HltAllergyIntolerance` and `HltMedicationPrescription` records with mandatory structured override logging for severe interactions.\n3. **Zero Unacknowledged Critical/Panic Diagnostic Results** via automated SLA-tracked Rapider Home `WorkItem` escalations on `CRITICAL_PANIC` LOINC lab and radiology findings.\n4. **100% Tamper-Evident Legal Medical Record & HIPAA Audit Compliance** through immutable `SIGNED_LOCKED` encounter locking, append-only clinical addenda, and Break-the-Glass access auditing.\n\n### Top 6 Global Benchmark Summary (`P1`–`P6`)\nSynthesizes **athenaOne (`P1`)** zero-disruption cloud clinical workflows, `athenaAmbient` scribing, and care-gap prompts; **EpicCare (`P2`)** Storyboard longitudinal facesheet, CPOE order sets, and HTI-1 DSI advisories; **Oracle Health (`P3`)** AI-native clinical documentation and enterprise terminology rigor; **eClinicalWorks V12 (`P4`)** PRISMA cross-source chronological chart search; **NextGen Enterprise (`P5`)** specialty-adaptive templates and USCDI v3 compliance; and **Salesforce Health Cloud (`P6`)** HL7 FHIR R4 clinical data modeling and SDOH-aware care plans.\n\n---\n\n## 2. In-Scope, Out-of-Scope & Suite Ownership Boundaries\n\n### In-Scope (`electronic-health-records-ehr`)\n- Authoritative Master Patient Index (`HltPatient`) with USCDI v3+ demographics, SDOH, duplicate detection, and survivor merge.\n- Longitudinal clinical summary (Chart 360): active/resolved problems (`HltProblemCondition`), allergies (`HltAllergyIntolerance`), active medications (`HltMedicationPrescription`), immunizations & HEDIS/MIPS care gaps (`HltCarePlanQualityGap`).\n- Structured clinical encounter documentation (`HltEncounterNote`), discrete vitals flowsheets (`Decimal128`), clinician signature, resident/APP co-signature, and legal addendum locking.\n- Medication reconciliation, drug-allergy/drug-drug CDS checks, eRx/EPCS dispatch contracts, and CPOE lab/imaging order & discrete LOINC result management (`HltDiagnosticOrderResult`).\n- HL7 FHIR R4 US Core / C-CDA clinical exchange, hospital ADT ingestion, ONC HTI-1 DSI transparency metadata, and HIPAA Break-the-Glass restricted chart governance (`HltFhirExchangeBreakGlassLog`).\n\n### Out-of-Scope (Delegated to Peer Rapider Apps)\n- Multi-resource clinic appointment calendars, front-desk check-in kiosks, payer eligibility (`X12 270/271`), prior authorizations (`278`), and copay collection (owned by `#152 medical-practice-management`).\n- Live WebRTC video consult media sessions, virtual waiting rooms, and continuous Remote Patient Monitoring wearable ingestion (owned by `#153 telemedicine-and-virtual-care`).\n- Payer fee schedules, ANSI X12 `837P`/`837I` claim scrubbing/clearinghouse submission, `835` ERA remittance auto-posting, denial appeals, and patient billing statements (owned by `#154 medical-billing-and-claims-management`).\n- Patient-facing appointment reminder cadences, mobile digital intake packets, encrypted patient portal threads, and population recall campaigns (owned by `#155 patient-engagement-and-communication`).\n- General Ledger accounting (`acc`) and card/ACH payment rails (`payments`) — which NEVER receive raw clinical PHI.\n\n### Cross-Suite Ownership Contract\n\n| Domain / App | Owns Canonical Models | Integration Contract with `electronic-health-records-ehr` |\n| :--- | :--- | :--- |\n| **`electronic-health-records-ehr` (`#151` — This App)** | `HltPatient`, `HltEncounterNote`, `HltProblemCondition`, `HltAllergyIntolerance`, `HltMedicationPrescription`, `HltDiagnosticOrderResult`, `HltCarePlanQualityGap`, `HltFhirExchangeBreakGlassLog` | Authoritative owner of `HltPatient` MPI and longitudinal clinical chart; publishes signed encounter coding, Cures Act result releases, and care-gap events. |\n| **`medical-practice-management` (`#152`)** | `HltProviderProfile`, `HltClinicFacilityRoom`, `HltAppointmentSlot`, `HltAppointment`, `HltPatientCoverage`, `HltEligibilityVerification`, `HltFrontDeskCheckIn`, `HltReferralOrder` | `#152` links appointments and insurance coverages to `HltPatient.id`; `#151` launches `HltEncounterNote` directly from roomed `HltAppointment`s and references `HltProviderProfile`. |\n| **`telemedicine-and-virtual-care` (`#153`)** | `HltTelehealthSession`, `HltRemotePatientDevice`, `HltRpmReadingAlert`, `HltAsyncEVisitConsult` | `#153` embeds/links `HltEncounterNote` for virtual consult charting and escalates verified `HltRpmReadingAlert` vitals summaries into the longitudinal chart. |\n| **`medical-billing-and-claims-management` (`#154`)** | `HltChargeSuperbill`, `HltPayerFeeSchedule`, `HltClaim837`, `HltRemittanceEra835`, `HltClaimDenialAppeal`, `HltPatientStatementPlan` | Signing `HltEncounterNote` emits `hlt.ehr.encounter.signed` with suggested ICD-10-CM & CPT codes so `#154` generates `HltChargeSuperbill`; `#154` settles to `acc`/`payments` using PHI-free tokens. |\n| **`patient-engagement-and-communication` (`#155`)** | `HltPatientPortalAccess`, `HltAppointmentCadenceReminder`, `HltDigitalIntakePacket`, `HltSecurePatientThread`, `HltCareOutreachCampaign` | `#155` submits pre-visit intake history for clinician reconciliation in `#151` and delivers signed After-Visit Summaries, Cures Act lab results, and `HltCarePlanQualityGap` recalls to patients. |\n| **`employees` (`HR` Suite)** | `HrEmployee`, `HrDepartment`, `HrLocation` | Clinicians, nurses, and medical assistants map to `HrEmployee` via `HltProviderProfile` (`#152`) and user identity. |\n| **Rapider Platform** | Identity/RBAC, `DriveFile`, Home `WorkItem`, `projectChannelMessage`, `requiredWorkflows` | Co-signatures, panic lab alerts, and Break-the-Glass reviews route to Home `WorkItem`s; diagnostic PDFs/images store in `DriveFile`; Chart Q&A runs in `projectChannelMessage`. |\n\n---\n\n## 3. Primary Web Pages & Sidebar Navigation Architecture (12 Pages)\n\nAll visible sidebar groups strictly satisfy the **Minimum 3 Items per Section Rule** (`Clinical Workspace`: 3 items, `Orders & Medications`: 3 items, `Population & Interoperability`: 3 items = 9 visible items; 3 detail/drawer routes hidden with `displayOnMenu: false`).\n\n| # | Route | Page Title | Sidebar Section | Menu Visible | Key Components & UX |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 1 | `clinical-cockpit` | Provider Clinical Cockpit | `Clinical Workspace` | `true` (Order 1) | Today's scheduled/roomed patients, unsigned `HltEncounterNote` backlog, unacknowledged `CRITICAL_PANIC` lab KPI badge, co-sign queue count, and Care Gap closure rate. |\n| 2 | `patient-directory` | Master Patient Directory | `Clinical Workspace` | `true` (Order 2) | Searchable `HltPatient` MPI registry (MRN, Name, DOB, Restricted VIP badge, `<rapider-phone-input>` filter/edit), duplicate-merge indicator, `#activeFilterTagsBar`. |\n| 3 | `encounters-board` | Clinical Encounters & Sign-Off | `Clinical Workspace` | `true` (Order 3) | `<rapider-kanban>` + table view of `HltEncounterNote` lifecycle (`OPEN` -> `PENDING_COSIGN` -> `SIGNED_LOCKED` -> `AMENDED`), specialty/provider filters, same-day closure tracker. |\n| 4 | `medications-erx` | Medications & e-Prescribing | `Orders & Medications` | `true` (Order 4) | Active `HltMedicationPrescription` queue, renewal requests, drug-allergy/drug-drug CDS severity badges, DEA EPCS controlled-substance status pills, pharmacy transmission log. |\n| 5 | `diagnostic-orders` | Lab & Imaging Orders (CPOE) | `Orders & Medications` | `true` (Order 5) | `HltDiagnosticOrderResult` order & result inbox, abnormal/panic result filter pills (`NORMAL`, `ABNORMAL`, `CRITICAL_PANIC`), discrete LOINC trend sparklines, clinician sign-off action. |\n| 6 | `problems-allergies` | Problems & Allergy Safety | `Orders & Medications` | `true` (Order 6) | Cross-patient clinical safety registry of `HltProblemCondition` (SNOMED/ICD-10) and `HltAllergyIntolerance` (RxNorm criticality), unverified NKA audit filter, chronic disease cohort filter. |\n| 7 | `care-plans-quality` | Care Plans & Quality Gaps | `Population & Interoperability` | `true` (Order 7) | `HltCarePlanQualityGap` registry for HEDIS/MIPS preventive screenings, immunization CVX compliance, overdue chronic follow-ups, and 1-click outreach trigger to `#155`. |\n| 8 | `fhir-interoperability` | FHIR & HIE Exchange Hub | `Population & Interoperability` | `true` (Order 8) | Inbound/outbound `HltFhirExchangeBreakGlassLog` monitor (HL7 FHIR R4 bundles, C-CDA transitions of care, Hospital ADT discharge feeds), outside-record reconciliation status. |\n| 9 | `hipaa-break-glass` | Clinical Audit & Break-Glass | `Population & Interoperability` | `true` (Order 9) | HIPAA minimum-necessary access governance, emergency Break-the-Glass event log, ONC HTI-1 DSI algorithm transparency catalog, and Privacy Officer review status. |\n| 10 | `patient-chart-360` | Patient Longitudinal Chart 360 | *(None)* | `false` | Split-pane clinical facesheet (`HltPatient` banner with allergy/code-status alerts, problems, meds, vitals `Decimal128` charts, labs, care plans, anchored `projectChannelMessage` Chart Q&A) + Break-the-Glass gate if restricted. |\n| 11 | `encounter-charting` | SOAP Encounter & Ambient Scribe | *(None)* | `false` | Active encounter workspace (`HltEncounterNote`): vitals entry, SOAP/specialty macros, `AI_DRAFT_UNVERIFIED` side-by-side clinician review & accept controls, ICD-10/CPT coder, Sign & Lock / Addendum modal. |\n| 12 | `order-rx-drawer` | New CPOE Order / eRx Drawer | *(None)* | `false` | Sliding drawer for placing lab/imaging orders or e-prescriptions with live CDS drug-allergy/interaction checks, `<rapider-phone-input>` pharmacy callback, `finally` button reset, and auto-close on Save/Cancel. |\n\n### Rapider UI & QA Standards Enforced Across All 12 Pages\n- **SWR Read Standard:** Initial loads exclusively call `window.rapiderApi.findSWR(entityName, filter)` and `countSWR(entityName, where)` with clean business filters (never passing redundant `isDeleted` clauses) and defensive in-memory filtering (`items = raw.filter(i => i && i.isDeleted !== true)`).\n- **Table Actions & Navigation:** Primary clinical identifiers (MRN / Patient Name, Encounter Ref, Rx Number, Order Accession, Exchange Ref) render as `font-semibold text-primary hover:underline cursor-pointer` navigating to `#/patient-chart-360` or `#/encounter-charting`. Zero standalone \"View\" buttons in `Actions`; Edit uses icon + text (`<i class=\"fas fa-edit mr-1\"></i><span>Edit</span>`); Delete (permitted only on unsigned `DRAFT` artifacts—never signed clinical records) uses icon-only (`<i class=\"fas fa-trash-alt\"></i>` with `title=\"Delete\" aria-label=\"Delete\"`).\n- **Search & `#activeFilterTagsBar`:** Synchronous client-side search on bulk lists or debounced `skip: 0` API search on paginated MPI/order archives, rendering HTML-escaped active filter chips and `[Clear all]`.\n- **Contrast & Dialog Ban:** All primary and danger buttons (e.g., Sign & Lock Chart, Critical Override, Break-the-Glass Confirm) enforce `!text-white text-white` and `style=\"color: #ffffff !important;\"`. Zero native `window.alert`, `window.confirm`, or `window.prompt` dialogs.\n\n---\n\n## 4. Canonical Data Models (`Hlt*` — 8 Models)\n\nAll models omit `projectId` (managed by platform host multi-tenancy), use platform UUID `id` (`00000000-xxxx-xxxx-xxxx-xxxxxxxxxxxx` reserved strictly for synthetic non-PHI sample seeds), use `Decimal128` for all clinical measurements and dosages, and enforce optimistic concurrency via `version: Integer`.\n\n| Model Name | Key Fields & Types | Relationships & External Refs | Invariants & Lifecycle |\n| :--- | :--- | :--- | :--- |\n| **`HltPatient`** | `mrn: String`, `legalFirstName: String`, `legalLastName: String`, `chosenName: String?`, `dateOfBirth: Date`, `administrativeSex: Enum(FEMALE, MALE, OTHER, UNKNOWN)`, `genderIdentity: String?`, `preferredLanguage: String`, `mobilePhone: String`, `emergencyContactPhone: String`, `sdohRiskFlags: Array<String>`, `nkaVerifiedAt: DateTime?`, `codeStatus: Enum(FULL_CODE, DNR, DNI, COMFORT_CARE)`, `isRestrictedChart: Boolean`, `status: Enum(ACTIVE, INACTIVE, DECEASED, MERGED)`, `version: Int` | `mergedIntoPatientId -> HltPatient?`, `primaryCareProviderId -> HltProviderProfile?` (`#152`) | Unique `mrn` per workspace; `MERGED` records are read-only and redirect lookups to `mergedIntoPatientId`; `isRestrictedChart == true` requires valid `HltFhirExchangeBreakGlassLog` session grant before returning clinical child records. |\n| **`HltEncounterNote`** | `encounterNumber: String`, `encounterType: Enum(AMBULATORY_VISIT, TELEHEALTH, URGENT_CARE, PROCEDURE, ANNUAL_WELLNESS, TRANSITION_OF_CARE)`, `encounterDate: DateTime`, `chiefComplaint: String`, `vitals: {systolicBp: Int, diastolicBp: Int, heartRate: Int, respRate: Int, tempCelsius: Decimal128, spo2Pct: Decimal128, weightKg: Decimal128, heightCm: Decimal128, bmi: Decimal128}`, `soapSections: {subjective: String, objective: String, assessment: String, plan: String}`, `ambientDraftStatus: Enum(NONE, AI_DRAFT_UNVERIFIED, CLINICIAN_REVIEWED)`, `assessmentIcd10Codes: Array<String>`, `suggestedCptCodes: Array<String>`, `signedAt: DateTime?`, `cosignedAt: DateTime?`, `addenda: Array<{addedAt, authorUserId, text}>`, `status: Enum(OPEN, PENDING_COSIGN, SIGNED_LOCKED, AMENDED)`, `version: Int` | `patientId -> HltPatient`, `appointmentId -> HltAppointment?` (`#152`), `authorProviderId -> HltProviderProfile`, `cosignerProviderId -> HltProviderProfile?`, `cosignWorkItemId -> WorkItem?` | **Clinical Safety Invariant:** Cannot transition to `SIGNED_LOCKED` while `ambientDraftStatus == AI_DRAFT_UNVERIFIED` or without licensed clinician credential; once `SIGNED_LOCKED`, `vitals` and `soapSections` are permanently immutable (only `addenda` append allowed, moving status to `AMENDED`). |\n| **`HltProblemCondition`** | `snomedCode: String`, `icd10Code: String`, `displayName: String`, `clinicalStatus: Enum(ACTIVE, RECURRENCE, RELAPSE, INACTIVE, REMISSION, RESOLVED)`, `verificationStatus: Enum(CONFIRMED, PROVISIONAL, DIFFERENTIAL, REFUTED)`, `chronicity: Enum(ACUTE, CHRONIC, HEALTH_MAINTENANCE)`, `onsetDate: Date?`, `abatementDate: Date?`, `clinicalNotes: String?`, `version: Int` | `patientId -> HltPatient`, `recordedEncounterId -> HltEncounterNote?`, `recordedByUserId -> User` | `RESOLVED` requires `abatementDate`; active chronic problems surface automatically on Chart 360 facesheet and encounter assessment pickers. |\n| **`HltAllergyIntolerance`** | `substanceRxNormOrSnomed: String`, `substanceName: String`, `category: Enum(MEDICATION, FOOD, BIOLOGIC, ENVIRONMENT)`, `criticality: Enum(LOW, HIGH, LIFE_THREATENING_UNABLE_TO_ASSESS)`, `severity: Enum(MILD, MODERATE, SEVERE, ANAPHYLAXIS)`, `reactionManifestations: Array<String>`, `clinicalStatus: Enum(ACTIVE, INACTIVE, ENTERED_IN_ERROR)`, `recordedAt: DateTime`, `version: Int` | `patientId -> HltPatient`, `recordedByUserId -> User` | Adding an `ACTIVE` allergy automatically clears `HltPatient.nkaVerifiedAt`; records are never hard-deleted (`ENTERED_IN_ERROR` preserves medico-legal audit history). |\n| **`HltMedicationPrescription`** | `rxNumber: String`, `rxNormCode: String`, `medicationName: String`, `dosageStrength: Decimal128`, `dosageUnit: String`, `route: String`, `frequencySig: String`, `dispenseQuantity: Decimal128`, `daysSupply: Int`, `refillsAuthorized: Int`, `deaSchedule: Enum(NON_CONTROLLED, C_II, C_III, C_IV, C_V)`, `pharmacyName: String`, `pharmacyPhone: String`, `cdsAlertsTriggered: Array<{type, severity, overrideReason}>`, `epcsTwoFactorVerifiedAt: DateTime?`, `status: Enum(DRAFT, PENDING_SIGN, ACTIVE_TRANSMITTED, HOME_REPORTED, COMPLETED, DISCONTINUED, CANCELLED)`, `version: Int` | `patientId -> HltPatient`, `encounterId -> HltEncounterNote?`, `prescriberProviderId -> HltProviderProfile` | **EPCS & CDS Invariant:** Severe drug-allergy/drug-drug alerts block transition to `ACTIVE_TRANSMITTED` unless `overrideReason` is populated by a licensed prescriber; `deaSchedule != NON_CONTROLLED` requires `epcsTwoFactorVerifiedAt != null`. |\n| **`HltDiagnosticOrderResult`** | `accessionNumber: String`, `category: Enum(LABORATORY, IMAGING, CARDIOLOGY, PATHOLOGY)`, `loincOrCptCode: String`, `orderDisplayName: String`, `priority: Enum(ROUTINE, URGENT, STAT)`, `diagnosisIcd10Pointers: Array<String>`, `discreteObservations: Array<{loincCode, analyteName, numericValue: Decimal128?, textValue: String?, unit: String, refRangeLow: Decimal128?, refRangeHigh: Decimal128?, abnormalFlag: Enum(NORMAL, LOW, HIGH, CRITICAL_PANIC)}>`, `narrativeImpression: String?`, `curesActReleaseHoldReason: String?`, `reviewedByProviderAt: DateTime?`, `status: Enum(DRAFT, ORDERED, SPECIMEN_COLLECTED, PARTIAL_RESULT, FINAL_RESULT, REVIEWED_SIGNED, CANCELLED)`, `version: Int` | `patientId -> HltPatient`, `encounterId -> HltEncounterNote?`, `orderingProviderId -> HltProviderProfile`, `reportDriveFileId -> DriveFile?`, `panicWorkItemId -> WorkItem?` | Requires >= 1 `diagnosisIcd10Pointers` before `ORDERED`; arrival of any `CRITICAL_PANIC` observation auto-creates a high-priority Home `WorkItem` and forbids silent dismissal without `reviewedByProviderAt`. |\n| **`HltCarePlanQualityGap`** | `itemType: Enum(CARE_GOAL, IMMUNIZATION_CVX, HEDIS_MIPS_GAP, PREVENTIVE_RECALL)`, `measureOrCvxCode: String`, `title: String`, `targetMetricText: String`, `dueDate: Date`, `closedAt: DateTime?`, `closureEvidenceRef: String?`, `status: Enum(OPEN_DUE, OVERDUE, IN_PROGRESS, CLOSED_MET, EXCLUDED_CONTRAINDICATED)`, `version: Int` | `patientId -> HltPatient`, `ownerProviderId -> HltProviderProfile?`, `closingEncounterId -> HltEncounterNote?` | `EXCLUDED_CONTRAINDICATED` requires documented clinical exclusion reason; closing via qualifying `HltDiagnosticOrderResult` or `HltEncounterNote` records `closureEvidenceRef`. |\n| **`HltFhirExchangeBreakGlassLog`** | `recordKind: Enum(FHIR_R4_EXPORT, FHIR_R4_IMPORT, CCDA_IMPORT, ADT_EVENT, BREAK_GLASS_ACCESS, DSI_FEEDBACK)`, `externalSourceSystem: String?`, `fhirResourceSummary: String`, `reconciliationStatus: Enum(NOT_APPLICABLE, STAGED_FOR_REVIEW, RECONCILED, REJECTED)`, `breakGlassReasonCode: Enum(NONE, EMERGENCY_CARE, ON_CALL_COVERAGE, PATIENT_REQUEST, COMPLIANCE_INVESTIGATION)`, `breakGlassJustification: String?`, `grantExpiresAt: DateTime?`, `occurredAt: DateTime`, `version: Int` | `patientId -> HltPatient`, `actorUserId -> User`, `payloadDriveFileId -> DriveFile?`, `privacyReviewWorkItemId -> WorkItem?` | **Append-Only Audit Invariant:** `BREAK_GLASS_ACCESS` entries are strictly append-only immutable, expire automatically at `grantExpiresAt` (max 4 hours), and emit a Privacy Officer Home `WorkItem`. |\n\n---\n\n## 5. Core End-to-End User Journeys\n\n### Journey 1: Outpatient Clinical Visit — Ambient Draft Review, Vitals, CDS eRx & Same-Day Sign-Off\n1. Attending Physician opens `#/clinical-cockpit` (`findSWR`), sees roomed patient `Maya Lin (MRN-100482)` linked from `#152` (`HltAppointment`), and clicks the primary identifier to open `#/patient-chart-360?id=...`.\n2. Chart 360 immediately surfaces an `ANAPHYLAXIS` Penicillin `HltAllergyIntolerance`, active Type 2 Diabetes `HltProblemCondition`, and an overdue `HbA1c` `HltCarePlanQualityGap` alongside a grounded pre-visit \"What Changed\" brief.\n3. Physician clicks **Start / Open Encounter** (`#/encounter-charting`), reviews MA-recorded `Decimal128` vitals (`BP 128/78`, `BMI 27.4`), inspects the consented ambient AI SOAP draft (`ambientDraftStatus: AI_DRAFT_UNVERIFIED`), edits the Assessment/Plan, and explicitly clicks **Mark AI Draft Clinician-Reviewed**.\n4. Physician opens `#/order-rx-drawer` to prescribe Amoxicillin—the synchronous CDS engine blocks submission due to the Penicillin `ANAPHYLAXIS` allergy! Physician switches to Azithromycin, orders an `HbA1c` lab (`LOINC 4548-4`), and saves (drawer resets button in `finally` and auto-closes).\n5. Physician selects suggested `ICD-10 E11.9` and `CPT 99214`, then clicks **Sign & Lock Encounter**. `HltEncounterNote` transitions to `SIGNED_LOCKED` (immutable) and emits `hlt.ehr.encounter.signed` so `#154` generates the billing superbill and `#155` delivers the After-Visit Summary.\n\n### Journey 2: Critical / Panic Lab Result Arrival & Closed-Loop Home `WorkItem` Escalation\n1. External lab HL7 ORU / FHIR webhook delivers a `Potassium: 6.4 mmol/L` (`CRITICAL_PANIC`) result into `HltDiagnosticOrderResult` via `requiredWorkflows`.\n2. `electronic-health-records-ehr` immediately publishes a high-priority Rapider Home `WorkItem` assigned to the ordering clinician and lights up the `Critical Panic Results` KPI badge on `#/clinical-cockpit` and `#/diagnostic-orders`.\n3. Clinician filters `#/diagnostic-orders` by `Abnormal Flag: \"CRITICAL_PANIC\"` (displaying `#activeFilterTagsBar` chip), clicks the accession link, contacts the patient for urgent ED evaluation, documents follow-up action, and signs off `reviewedByProviderAt`, completing the Home `WorkItem` and releasing the result to `#155`.\n\n### Journey 3: Nurse Practitioner / Resident Charting & Supervising Physician Co-Signature\n1. Resident Physician completes an urgent-care `HltEncounterNote` and clicks **Submit for Co-Signature**, moving status to `PENDING_COSIGN` on the `#/encounters-board` `<rapider-kanban>` board and generating a Home `WorkItem` for the Supervising Attending.\n2. Supervising Attending reviews the note, adds a brief clinical attestation addendum, and executes `hlt.ehr.encounter.cosign`, transitioning the record to `SIGNED_LOCKED`.\n\n### Journey 4: Restricted VIP / Behavioral Health Chart & HIPAA \"Break-the-Glass\" Override\n1. On-call Physician searches `#/patient-directory` for an ED walk-in patient whose `HltPatient.isRestrictedChart == true`.\n2. Clicking the patient opens `#/patient-chart-360` with clinical panes masked behind a custom **HIPAA Emergency Break-the-Glass Modal** (zero native `confirm()`/`prompt()`).\n3. Physician selects `EMERGENCY_CARE`, enters clinical justification, and confirms; the backend writes an immutable `HltFhirExchangeBreakGlassLog` entry (`grantExpiresAt = now + 4h`), unlocks Chart 360 for that clinician session, and dispatches a mandatory audit `WorkItem` to the HIPAA Privacy Officer.\n\n### Journey 5: External C-CDA / FHIR Transition-of-Care Ingestion & Staged Reconciliation\n1. Inbound hospital discharge `ADT A03` + C-CDA arrives on `#/fhir-interoperability` (`STAGED_FOR_REVIEW`).\n2. Nurse Care Coordinator opens the side-by-side reconciliation tray, accepts 2 new discharge medications and 1 CHF diagnosis into `HltMedicationPrescription` and `HltProblemCondition` (confirmed by clinician), and triggers a 7-day Transitional Care Management scheduling event to `#152`.\n\n### Journey 6: List-to-Detail Click-Through & Filter State Restoration\n1. Quality Nurse filters `#/care-plans-quality` by `Status: \"OVERDUE\"` and types `\"Mammogram\"` into search, rendering chips `Status: \"OVERDUE\" ✕` and `Search: \"Mammogram\" ✕` in `#activeFilterTagsBar`.\n2. Nurse clicks patient link `MRN-100219` -> navigates cleanly to `#/patient-chart-360?id=...` without `<base href>` URL hijacking, verifies prior imaging history, and clicks `#btnGoBack` to return to `#/care-plans-quality` with both filter chips and filtered dataset preserved.\n\n---\n\n## 6. Consolidated Feature Priorities & Work Packages\n\n### `P0` Foundation (MVP Release — Mandatory)\n- **WP-P0-1: Master Patient Index & Chart 360 (`EHR-001`, `EHR-002`, `EHR-003`):** `HltPatient` USCDI v3 directory, duplicate detection/survivor merge, and unified split-pane Chart 360 facesheet.\n- **WP-P0-2: Problem List, Allergy Registry & Encounter Charting (`EHR-004`, `EHR-005`, `EHR-006`, `EHR-007`, `EHR-008`, `EHR-009`):** `HltProblemCondition`, `HltAllergyIntolerance`, `HltEncounterNote` SOAP templates, `Decimal128` vitals + BMI auto-calc, immutable clinician sign/cosign/addendum lock, and ICD-10/CPT billing handoff event to `#154`.\n- **WP-P0-3: Medication Reconciliation & CDS Safety Engine (`EHR-011`, `EHR-012`):** `HltMedicationPrescription` management, synchronous drug-allergy/drug-drug/duplicate therapy checks with mandatory severe-alert override logging.\n- **WP-P0-4: CPOE Orders & Discrete LOINC Results (`EHR-015`, `EHR-016`):** `HltDiagnosticOrderResult` lab/imaging ordering, LOINC result parsing, abnormal/panic flagging, and clinician sign-off.\n- **WP-P0-5: FHIR R4 / C-CDA Exchange & HIPAA Break-the-Glass (`EHR-020`, `EHR-021`):** `HltFhirExchangeBreakGlassLog` US Core FHIR R4 export/import, staged C-CDA reconciliation, and Break-the-Glass restricted chart enforcement.\n\n### `P1` Scale & Enterprise Clinical Governance\n- **WP-P1-1: Specialty Flowsheets, eRx/EPCS & HTI-1 DSI Cards (`EHR-010`, `EHR-013`, `EHR-014`, `EHR-023`):** Scored behavioral/clinical instruments (PHQ-9/GAD-7), external eRx/EPCS 2FA workflows, ONC HTI-1 DSI source-attribute transparency cards, and SME vs. Enterprise progressive disclosure.\n- **WP-P1-2: Closed-Loop Panic Escalation & Cures Act Release (`EHR-017`, `EHR-018`):** SLA-timed Home `WorkItem` escalations for `CRITICAL_PANIC` results and automated 21st Century Cures Act release to `#155`.\n- **WP-P1-3: Care Plans, Immunizations & ADT Transitions (`EHR-019`, `EHR-022`):** `HltCarePlanQualityGap` HEDIS/MIPS & CVX immunization tracking, plus inbound hospital ADT discharge follow-up triggers.\n\n### `P2` Grounded Clinical AI (Clinician-in-the-Loop Mandatory)\n- **WP-P2-1: Grounded Ambient Scribe & Pre-Visit Briefs (`EHR-024`, `EHR-025`):** `AI_DRAFT_UNVERIFIED` SOAP/ICD-10/order staging requiring explicit licensed clinician review & signature, plus cited pre-visit change summaries.\n- **WP-P2-2: Chart Q&A, Outside Document Extraction & Multilingual AVS (`EHR-026`, `EHR-027`, `EHR-028`):** `projectChannelMessage` longitudinal Chart Q&A, staged C-CDA/PDF problem/med extraction, and clinician-approved plain-language After-Visit Summaries.\n\n---\n\n## 7. Roles, Permissions & Field-Level Governance\n\n| Role | Permitted Actions | Restricted / Field-Level Boundaries |\n| :--- | :--- | :--- |\n| **Attending Physician / Licensed Prescriber (`hlt.ehr.physician`)** | Full Chart 360 access for care-assigned patients; author, sign, and co-sign `HltEncounterNote`; place CPOE orders & sign results; prescribe non-controlled & EPCS (with 2FA) medications; execute emergency Break-the-Glass with audit reason. | **Cannot** mutate or delete `SIGNED_LOCKED` encounters (append-only `addenda` only); cannot finalize AI drafts without explicit review; restricted charts masked until Break-the-Glass logged. |\n| **Advanced Practice Provider / Resident (`hlt.ehr.app_resident`)** | Chart encounters, record problems/allergies, draft CPOE orders, prescribe per state collaborative scope, submit notes to `PENDING_COSIGN`. | Supervising physician co-signature required where mandated by `HltProviderProfile` credential policy; cannot self-cosign own `PENDING_COSIGN` encounter. |\n| **Registered Nurse / Medical Assistant (`hlt.ehr.clinical_support`)** | Room patients, enter `vitals`, perform intake medication/allergy reconciliation staging, administer documented immunizations, prepare unsigned order sets per standing protocol. | **Cannot** sign `HltEncounterNote`, transmit prescriptions (`ACTIVE_TRANSMITTED`), override severe drug-allergy CDS blocks, or sign off `CRITICAL_PANIC` diagnostic results. |\n| **HIM / Medical Coder (`hlt.ehr.him_coder`)** | View signed `HltEncounterNote`s and diagnostic reports for coding validation; manage MPI duplicate merge reviews; process FHIR/C-CDA release-of-information exports. | **Cannot** alter clinical narrative, vitals, allergies, or prescribe medications; access restricted strictly to minimum-necessary chart coding views. |\n| **HIPAA Privacy & Compliance Officer (`hlt.ehr.privacy_officer`)** | Inspect `HltFhirExchangeBreakGlassLog` access logs, configure `HltPatient.isRestrictedChart` flags, adjudicate Break-the-Glass audit Home `WorkItem`s, audit HTI-1 DSI logs. | Read-only on clinical care records; zero clinical ordering, charting, or prescribing privileges. |\n\n---\n\n## 8. Technical APIs, Guarded Commands, Events & `requiredWorkflows`\n\n### Guarded Idempotent Commands\nEvery clinical mutation requires `idempotencyKey`, `correlationId`, and `expectedVersion`:\n- `hlt.ehr.patient.mergeDuplicates` — Merges source `HltPatient` into target survivor MPI record, re-pointing clinical foreign keys and recording an immutable audit lineage.\n- `hlt.ehr.encounter.signAndLock` / `hlt.ehr.encounter.cosign` — Verifies licensed clinician role, confirms `ambientDraftStatus != AI_DRAFT_UNVERIFIED`, locks `HltEncounterNote` (`SIGNED_LOCKED`), and emits superbill coding payload to `#154`.\n- `hlt.ehr.encounter.appendAddendum` — Appends timestamped clinician addendum to a locked encounter (`AMENDED`) without altering original signed SOAP text.\n- `hlt.ehr.prescription.transmit` — Runs synchronous CDS allergy/interaction check, verifies `epcsTwoFactorVerifiedAt` for controlled schedules, and dispatches eRx workflow.\n- `hlt.ehr.diagnostic.acknowledgeResult` — Records clinician sign-off on `HltDiagnosticOrderResult`, closes linked panic `WorkItem`, and triggers Cures Act release.\n- `hlt.ehr.security.breakGlass` — Validates emergency reason code, creates time-bounded access grant in `HltFhirExchangeBreakGlassLog`, and emits Privacy Officer `WorkItem`.\n\n### Domain Events (Kafka)\n- **Published:** `hlt.ehr.patient.registered`, `hlt.ehr.patient.merged`, `hlt.ehr.encounter.signed`, `hlt.ehr.encounter.amended`, `hlt.ehr.prescription.transmitted`, `hlt.ehr.diagnostic.ordered`, `hlt.ehr.diagnostic.criticalPanicReceived`, `hlt.ehr.diagnostic.releasedToPatient`, `hlt.ehr.careGap.identified`, `hlt.ehr.security.breakGlassInvoked`.\n- **Consumed:** `hlt.pm.appointment.checkedIn` (`#152`), `hlt.telehealth.session.completed` (`#153`), `hlt.telehealth.rpmAlert.escalated` (`#153`), `hlt.engage.intakePacket.submitted` (`#155`).\n\n### `requiredWorkflows` in `app.manifest.json`\n1. `ehr-surescripts-erx-epcs-gateway` (Bi-directional NCPDP SCRIPT e-Prescribing transmission, refill request intake, and pharmacy status callbacks via vault-managed credentials).\n2. `ehr-hl7-fhir-lab-imaging-ingest` (Ingests HL7 v2 ORU / FHIR R4 `DiagnosticReport` feeds, evaluates LOINC panic thresholds, and triggers clinician Home `WorkItem` SLA escalations).\n3. `ehr-tefca-ccda-adt-exchange` (Processes inbound Carequality/TEFCA FHIR R4 & C-CDA documents and hospital ADT admission/discharge feeds).\n4. `ehr-hedis-mips-care-gap-evaluator` (Nightly cohort evaluation recomputing `HltCarePlanQualityGap` preventive and chronic care gaps).\n\n### Grounded Clinical AI Safety Contract (STRICT)\nAll AI capabilities (`athenaAmbient`-style SOAP drafts, pre-visit summaries, `projectChannelMessage` Chart Q&A, C-CDA entity extraction, and patient AVS drafts) operate strictly under the caller's HIPAA minimum-necessary RBAC, cite exact `HltEncounterNote.id`, `HltDiagnosticOrderResult.id`, and `HltMedicationPrescription.id` records, expose ONC HTI-1 DSI transparency metadata, and **NEVER auto-sign clinical notes, auto-commit diagnoses/allergies, transmit prescriptions, place orders, or release billing claims without explicit review and co-signature by a licensed clinician**.\n\n---\n\n## 9. Security, Privacy, Compliance & Non-Functional Requirements\n\n- **HIPAA Security & Privacy Rule + HITECH Compliance:** End-to-end TLS 1.3 in transit and AES-256 encryption at rest for all Electronic Protected Health Information (ePHI); strict minimum-necessary role scoping; automatic session inactivity lock; zero PHI written to browser `localStorage`, URL query strings (opaque UUIDs only), or unencrypted telemetry logs.\n- **Zero PHI Leakage to Finance (`FIN`):** When `#151` -> `#154` hands off patient balances or insurance settlements to `acc` (`FinJournalEntry`) or `payments` (`FinPaymentIntent`), payloads carry only opaque encounter/statement tokens and `Decimal128` monetary amounts (e.g., a `\\$35.00` copay or `\\$185.00` coinsurance)—never patient names, MRNs, ICD-10 diagnoses, or CPT clinical descriptions.\n- **ONC HTI-1, USCDI v3 & 21st Century Cures Act:** Standardized SNOMED CT, ICD-10-CM, RxNorm, LOINC, and CVX vocabularies; non-blocking FHIR R4 US Core APIs preventing Information Blocking; statutory medical-record retention (minimum 7–10 years adult; through age of majority + statute for pediatrics; zero hard deletion of signed clinical records).\n- **Zero Hardcoded Secrets & Responsive Clinical Accessibility:** Clearinghouse, HIE, and eRx secrets load exclusively via `process.env` / vault; WCAG 2.2 AA compliance, `#ffffff !important` button text contrast, and responsive layouts across `390px` (mobile on-call review), `768px` (iPad exam-room charting), and `1440px` (desktop split-pane Chart 360) in Light and Dark modes.\n\n---\n\n## 10. Deterministic Acceptance Criteria\n\n1. **Sidebar Section Threshold:** `app.manifest.json` defines 3 visible sidebar sections (`Clinical Workspace`: 3 items, `Orders & Medications`: 3 items, `Population & Interoperability`: 3 items) with zero 1-item or 2-item micro-headers; `#/patient-chart-360`, `#/encounter-charting`, and `#/order-rx-drawer` set `displayOnMenu: false`.\n2. **SWR & Clean Query Standard:** All 12 pages fetch initial data via `findSWR` / `countSWR` without manual `isDeleted` API query filters while defensively filtering `item.isDeleted !== true` in memory.\n3. **Ambient AI Clinician Co-Signature Gate:** Attempting `hlt.ehr.encounter.signAndLock` while `ambientDraftStatus == AI_DRAFT_UNVERIFIED` or from a non-licensed support role (`hlt.ehr.clinical_support`) fails deterministically with `422 AI_REVIEW_REQUIRED` / `403 FORBIDDEN`.\n4. **Signed Medical Record Immutability:** Attempting to edit `soapSections` or `vitals` or delete an `HltEncounterNote` in `SIGNED_LOCKED` or `AMENDED` status is rejected at both UI and API layers; only `hlt.ehr.encounter.appendAddendum` succeeds.\n5. **Drug-Allergy CDS & DEA EPCS Enforcement:** Submitting an `HltMedicationPrescription` matching an active `ANAPHYLAXIS` `HltAllergyIntolerance` blocks transmission unless a structured clinician `overrideReason` is supplied; Schedule II–V prescriptions fail without `epcsTwoFactorVerifiedAt`.\n6. **Critical/Panic Result Home `WorkItem` Loop:** Ingesting a `CRITICAL_PANIC` `HltDiagnosticOrderResult` automatically generates a Rapider Home `WorkItem` and blocks archiving until clinician sign-off (`reviewedByProviderAt`).\n7. **HIPAA Break-the-Glass Enforcement:** Querying clinical records for an `HltPatient` with `isRestrictedChart == true` without an active, unexpired `BREAK_GLASS_ACCESS` grant returns masked summary metadata only; invoking Break-the-Glass writes an append-only audit entry and emits a Privacy Officer `WorkItem`.\n8. **Decimal128 Clinical Precision:** Pediatric weight (`kg`), height (`cm`), BMI, medication dosages, and numeric LOINC lab results persist and compute via `Decimal128` with zero IEEE-754 floating-point drift.\n9. **Supervising Co-Signature Segregation:** Calling `hlt.ehr.encounter.cosign` where `cosignerProviderId == authorProviderId` is rejected with `403 SELF_COSIGN_FORBIDDEN`.\n10. **Optimistic CRUD & Cache Invalidation:** Creating or editing unsigned clinical drafts, care-gap statuses, or encounter kanban cards updates in-memory arrays and `<rapider-kanban>` immediately, clears `swr_find_` / `swr_count_` keys, and rolls back on API error.\n11. **Drawer Lifecycle & `finally` Reset:** Submitting or cancelling `#/order-rx-drawer` restores submit button text and enabled state in a `finally` block and closes the drawer automatically.\n12. **Search, `#activeFilterTagsBar` & Clear All:** Typing search queries or selecting abnormal/status filter pills renders HTML-escaped chips in `#activeFilterTagsBar`; clicking `✕` clears individual chips and `[Clear all]` restores full datasets synchronously.\n13. **Table Actions, Custom Elements & Dialog Ban:** Tables omit standalone \"View\" buttons, navigate via clickable primary identifiers, render icon+text `Edit` and icon-only `Delete` (on unsigned drafts only), adopt `<rapider-kanban>` and `<rapider-phone-input>`, enforce `#ffffff !important` on primary/danger buttons, and contain zero `alert()`/`confirm()`/`prompt()` calls.\n14. **Real Click-Through & Back Restoration:** Clicking a patient MRN in `#/patient-directory` or `#/care-plans-quality` transitions cleanly to `#/patient-chart-360?id=...` without `<base href>` 404 hijacking, and clicking `#btnGoBack` restores prior filter chips and scroll context across Light and Dark themes.\n",
   "githubRepo": {
     "name": "rapider-app-electronic-health-records-ehr-rapider-electronic-health-records"
-  }
+  },
+  "webPages": [
+    {
+      "name": "Provider Clinical Cockpit",
+      "route": "clinical-cockpit",
+      "htmlFilePath": "pages/clinical-cockpit/clinical-cockpit.html",
+      "title": "Provider Clinical Cockpit",
+      "group": "Clinical Workspace",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 1,
+      "developmentDetails": "Today's scheduled/roomed patients, unsigned HltEncounterNote backlog, unacknowledged CRITICAL_PANIC lab KPI badge, co-sign queue count, and Care Gap closure rate."
+    },
+    {
+      "name": "Master Patient Directory",
+      "route": "patient-directory",
+      "htmlFilePath": "pages/patient-directory/patient-directory.html",
+      "title": "Master Patient Directory",
+      "group": "Clinical Workspace",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 2,
+      "developmentDetails": "Searchable HltPatient MPI registry (MRN, Name, DOB, Restricted VIP badge, <rapider-phone-input> filter/edit), duplicate-merge indicator, #activeFilterTagsBar."
+    },
+    {
+      "name": "Clinical Encounters & Sign-Off",
+      "route": "encounters-board",
+      "htmlFilePath": "pages/encounters-board/encounters-board.html",
+      "title": "Clinical Encounters & Sign-Off",
+      "group": "Clinical Workspace",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 3,
+      "developmentDetails": "<rapider-kanban> + table view of HltEncounterNote lifecycle (OPEN -> PENDING_COSIGN -> SIGNED_LOCKED -> AMENDED), specialty/provider filters, same-day closure tracker."
+    },
+    {
+      "name": "Medications & e-Prescribing",
+      "route": "medications-erx",
+      "htmlFilePath": "pages/medications-erx/medications-erx.html",
+      "title": "Medications & e-Prescribing",
+      "group": "Orders & Medications",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 4,
+      "developmentDetails": "Active HltMedicationPrescription queue, renewal requests, drug-allergy/drug-drug CDS severity badges, DEA EPCS controlled-substance status pills, pharmacy transmission log."
+    },
+    {
+      "name": "Lab & Imaging Orders (CPOE)",
+      "route": "diagnostic-orders",
+      "htmlFilePath": "pages/diagnostic-orders/diagnostic-orders.html",
+      "title": "Lab & Imaging Orders (CPOE)",
+      "group": "Orders & Medications",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 5,
+      "developmentDetails": "HltDiagnosticOrderResult order & result inbox, abnormal/panic result filter pills (NORMAL, ABNORMAL, CRITICAL_PANIC), discrete LOINC trend sparklines, clinician sign-off action."
+    },
+    {
+      "name": "Problems & Allergy Safety",
+      "route": "problems-allergies",
+      "htmlFilePath": "pages/problems-allergies/problems-allergies.html",
+      "title": "Problems & Allergy Safety",
+      "group": "Orders & Medications",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 6,
+      "developmentDetails": "Cross-patient clinical safety registry of HltProblemCondition (SNOMED/ICD-10) and HltAllergyIntolerance (RxNorm criticality), unverified NKA audit filter, chronic disease cohort filter."
+    },
+    {
+      "name": "Care Plans & Quality Gaps",
+      "route": "care-plans-quality",
+      "htmlFilePath": "pages/care-plans-quality/care-plans-quality.html",
+      "title": "Care Plans & Quality Gaps",
+      "group": "Population & Interoperability",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 7,
+      "developmentDetails": "HltCarePlanQualityGap registry for HEDIS/MIPS preventive screenings, immunization CVX compliance, overdue chronic follow-ups, and 1-click outreach trigger to #155."
+    },
+    {
+      "name": "FHIR & HIE Exchange Hub",
+      "route": "fhir-interoperability",
+      "htmlFilePath": "pages/fhir-interoperability/fhir-interoperability.html",
+      "title": "FHIR & HIE Exchange Hub",
+      "group": "Population & Interoperability",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 8,
+      "developmentDetails": "Inbound/outbound HltFhirExchangeBreakGlassLog monitor (HL7 FHIR R4 bundles, C-CDA transitions of care, Hospital ADT discharge feeds), outside-record reconciliation status."
+    },
+    {
+      "name": "Clinical Audit & Break-Glass",
+      "route": "hipaa-break-glass",
+      "htmlFilePath": "pages/hipaa-break-glass/hipaa-break-glass.html",
+      "title": "Clinical Audit & Break-Glass",
+      "group": "Population & Interoperability",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": true,
+      "order": 9,
+      "developmentDetails": "HIPAA minimum-necessary access governance, emergency Break-the-Glass event log, ONC HTI-1 DSI algorithm transparency catalog, and Privacy Officer review status."
+    },
+    {
+      "name": "Patient Longitudinal Chart 360",
+      "route": "patient-chart-360",
+      "htmlFilePath": "pages/patient-chart-360/patient-chart-360.html",
+      "title": "Patient Longitudinal Chart 360",
+      "group": "(None)",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": false,
+      "order": 10,
+      "developmentDetails": "Split-pane clinical facesheet (HltPatient banner with allergy/code-status alerts, problems, meds, vitals Decimal128 charts, labs, care plans, anchored projectChannelMessage Chart Q&A) + Break-the-Glass gate if restricted."
+    },
+    {
+      "name": "SOAP Encounter & Ambient Scribe",
+      "route": "encounter-charting",
+      "htmlFilePath": "pages/encounter-charting/encounter-charting.html",
+      "title": "SOAP Encounter & Ambient Scribe",
+      "group": "(None)",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": false,
+      "order": 11,
+      "developmentDetails": "Active encounter workspace (HltEncounterNote): vitals entry, SOAP/specialty macros, AI_DRAFT_UNVERIFIED side-by-side clinician review & accept controls, ICD-10/CPT coder, Sign & Lock / Addendum modal."
+    },
+    {
+      "name": "New CPOE Order / eRx Drawer",
+      "route": "order-rx-drawer",
+      "htmlFilePath": "pages/order-rx-drawer/order-rx-drawer.html",
+      "title": "New CPOE Order / eRx Drawer",
+      "group": "(None)",
+      "icon": "fas fa-heartbeat",
+      "displayInMenu": false,
+      "order": 12,
+      "developmentDetails": "Sliding drawer for placing lab/imaging orders or e-prescriptions with live CDS drug-allergy/interaction checks, <rapider-phone-input> pharmacy callback, finally button reset, and auto-close on Save/Cancel."
+    }
+  ]
 }
