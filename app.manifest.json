@@ -13,7 +13,7 @@
   "isPublic": true,
   "isPaid": false,
   "price": "Free",
-  "status": "application-definition-in-progress",
+  "status": "data-models-in-progress",
   "developerName": "Tansel Ozkusaksiz",
   "createdById": "e995822b-f88d-40ef-86df-0f07cb1149d8",
   "createdBy": "Tansel Ozkusaksiz",
@@ -31,7 +31,2781 @@
     "createdById": "e995822b-f88d-40ef-86df-0f07cb1149d8",
     "createdBy": "Tansel Ozkusaksiz"
   },
-  "dataModels": [],
+  "dataModels": [
+    {
+      "name": "HrDepartment",
+      "title": "Department",
+      "description": "Organizational units within the company.",
+      "domainName": "Rapider HR & Talent Suite",
+      "domainKey": "HR",
+      "datatableName": "HrDepartment",
+      "dataTableName": "HrDepartment",
+      "sqlTableName": "hr_department",
+      "isolationScope": "ENTERPRISE_SHARED_WITH_CONFIDENTIAL_VAULTS",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name",
+          "code",
+          "description"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "name"
+          ],
+          "immutableFields": [],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "description"
+          ],
+          "additionalPrompt": "Ensure code is short uppercase.",
+          "requireUserConfirmation": false
+        },
+        "entityItemUpdate": {
+          "immutableFields": [],
+          "autoGenerateFields": [],
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "Department cannot be its own parent."
+        },
+        "entityRead": {
+          "defaultPageSize": 50,
+          "defaultContextLimit": 100
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "code",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "headId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "parentDepartmentId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "legalEntityId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "costCenterCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "head",
+          "type": "belongsTo",
+          "sourceModel": "HrDepartment",
+          "sourceField": "headId",
+          "targetModel": "HrEmployee",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Employee who heads this department."
+        },
+        {
+          "name": "parentDepartment",
+          "type": "belongsTo",
+          "sourceModel": "HrDepartment",
+          "sourceField": "parentDepartmentId",
+          "targetModel": "HrDepartment",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Parent department in the organizational hierarchy."
+        },
+        {
+          "name": "subDepartments",
+          "type": "hasMany",
+          "sourceModel": "HrDepartment",
+          "sourceField": "id",
+          "targetModel": "HrDepartment",
+          "targetField": "parentDepartmentId",
+          "throughModel": null,
+          "description": "Sub-departments under this department."
+        },
+        {
+          "name": "employees",
+          "type": "hasMany",
+          "sourceModel": "HrDepartment",
+          "sourceField": "id",
+          "targetModel": "HrEmployee",
+          "targetField": "departmentId",
+          "throughModel": null,
+          "description": "Employees in this department."
+        },
+        {
+          "name": "positions",
+          "type": "hasMany",
+          "sourceModel": "HrDepartment",
+          "sourceField": "id",
+          "targetModel": "HrPosition",
+          "targetField": "departmentId",
+          "throughModel": null,
+          "description": "Positions in this department."
+        }
+      ]
+    },
+    {
+      "name": "HrEmployee",
+      "title": "Employee",
+      "description": "Core profile representing an individual worker within the organization.",
+      "domainName": "Rapider HR & Talent Suite",
+      "domainKey": "HR",
+      "datatableName": "HrEmployee",
+      "dataTableName": "HrEmployee",
+      "sqlTableName": "hr_employee",
+      "isolationScope": "ENTERPRISE_SHARED_WITH_CONFIDENTIAL_VAULTS",
+      "titleFieldTemplate": "{{ firstName }} {{ lastName }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "firstName",
+          "lastName",
+          "email",
+          "jobTitle",
+          "employeeNumber"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "firstName",
+            "lastName",
+            "email",
+            "status"
+          ],
+          "immutableFields": [],
+          "requiredRelations": [],
+          "autoGenerateFields": [],
+          "additionalPrompt": "Ensure the email address is formatted correctly. If a department is mentioned, link the employee to the correct departmentId.",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "If status is 'Active', a hireDate must be provided or assumed as today."
+        },
+        "entityItemUpdate": {
+          "immutableFields": [],
+          "autoGenerateFields": [],
+          "additionalPrompt": "When updating manager or department, suggest creating a Lifecycle Event.",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "Ensure the employee is not set as their own manager.",
+          "restrictedStates": [
+            {
+              "description": "Cannot update terminated employees without authorization.",
+              "where": {}
+            }
+          ]
+        },
+        "entityRead": {
+          "defaultPageSize": 50,
+          "defaultContextLimit": 100,
+          "hiddenFields": [
+            "ssn"
+          ],
+          "maskedFields": [
+            "personalEmail",
+            "phone"
+          ],
+          "additionalPrompt": "Always show job title, department, and status."
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [
+            "lifecycleEvents",
+            "documents",
+            "emergencyContacts"
+          ],
+          "restrictedStates": [
+            {
+              "description": "Active employees must be terminated before deletion.",
+              "where": {}
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "employeeNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "firstName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "lastName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "preferredName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "email",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "personalEmail",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "jobTitle",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "workerType",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "employmentType",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "hireDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "startDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "endDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "departmentId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "managerId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "positionId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "jobProfileId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "locationId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "legalEntityId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "weeklyHours",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "timeZone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "avatarColor",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "notes",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "department",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "departmentId",
+          "targetModel": "HrDepartment",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Department this employee belongs to."
+        },
+        {
+          "name": "manager",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "managerId",
+          "targetModel": "HrEmployee",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Manager this employee reports to."
+        },
+        {
+          "name": "position",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "positionId",
+          "targetModel": "HrPosition",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Specific position this employee holds."
+        },
+        {
+          "name": "jobProfile",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "jobProfileId",
+          "targetModel": "HrJobProfile",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Job profile associated with this employee."
+        },
+        {
+          "name": "location",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "locationId",
+          "targetModel": "HrLocation",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Work location of this employee."
+        },
+        {
+          "name": "legalEntity",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "legalEntityId",
+          "targetModel": "FinLegalEntity",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Legal entity employing this person."
+        },
+        {
+          "name": "lifecycleEvents",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrLifecycleEvent",
+          "targetField": "employeeId",
+          "throughModel": null,
+          "description": "Lifecycle events for this employee."
+        },
+        {
+          "name": "changeRequests",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrChangeRequest",
+          "targetField": "employeeId",
+          "throughModel": null,
+          "description": "Pending and past change requests for this employee."
+        },
+        {
+          "name": "documents",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrDocumentRef",
+          "targetField": "employeeId",
+          "throughModel": null,
+          "description": "Uploaded compliance and employment documents."
+        },
+        {
+          "name": "emergencyContacts",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrEmergencyContact",
+          "targetField": "employeeId",
+          "throughModel": null,
+          "description": "Emergency contacts."
+        },
+        {
+          "name": "directReports",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrEmployee",
+          "targetField": "managerId",
+          "throughModel": null,
+          "description": "Direct reports who report to this manager."
+        }
+      ]
+    },
+    {
+      "name": "HrLocation",
+      "title": "Location",
+      "description": "Physical office, hybrid site, or remote work locations.",
+      "domainName": "Rapider HR & Talent Suite",
+      "domainKey": "HR",
+      "datatableName": "HrLocation",
+      "dataTableName": "HrLocation",
+      "sqlTableName": "hr_location",
+      "isolationScope": "ENTERPRISE_SHARED_WITH_CONFIDENTIAL_VAULTS",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name",
+          "code",
+          "city",
+          "countryCode"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "code",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "countryCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "region",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "city",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "postalCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "timeZone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "locationType",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "employees",
+          "type": "hasMany",
+          "sourceModel": "HrLocation",
+          "sourceField": "id",
+          "targetModel": "HrEmployee",
+          "targetField": "locationId",
+          "throughModel": null,
+          "description": "Employees assigned to this location."
+        },
+        {
+          "name": "positions",
+          "type": "hasMany",
+          "sourceModel": "HrLocation",
+          "sourceField": "id",
+          "targetModel": "HrPosition",
+          "targetField": "locationId",
+          "throughModel": null,
+          "description": "Positions located here."
+        }
+      ]
+    },
+    {
+      "name": "HltPatient",
+      "title": "Patient",
+      "description": "Unique `mrn` per workspace; `MERGED` records are read-only and redirect lookups to `mergedIntoPatientId`; `isRestrictedChart == true` requires valid `HltFhirExchangeBreakGlassLog` session grant before returning clinical child records.",
+      "domainName": "Rapider Healthcare Suite",
+      "domainKey": "HLT",
+      "datatableName": "HltPatient",
+      "dataTableName": "HltPatient",
+      "sqlTableName": "hlt_patient",
+      "isolationScope": "HIPAA_CLINICAL_PHI_ISOLATED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Patient, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "mrn",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "legalFirstName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "legalLastName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "chosenName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "dateOfBirth",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "administrativeSex",
+          "type": "string",
+          "description": "Allowed values: FEMALE, MALE, OTHER, UNKNOWN",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "FEMALE",
+            "MALE",
+            "OTHER",
+            "UNKNOWN"
+          ],
+          "options": [
+            "FEMALE",
+            "MALE",
+            "OTHER",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "name": "genderIdentity",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "preferredLanguage",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "mobilePhone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "emergencyContactPhone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "sdohRiskFlags",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "nkaVerifiedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "codeStatus",
+          "type": "string",
+          "description": "Allowed values: FULL_CODE, DNR, DNI, COMFORT_CARE",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "FULL_CODE",
+            "DNR",
+            "DNI",
+            "COMFORT_CARE"
+          ],
+          "options": [
+            "FULL_CODE",
+            "DNR",
+            "DNI",
+            "COMFORT_CARE"
+          ]
+        },
+        {
+          "name": "isRestrictedChart",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Allowed values: ACTIVE, INACTIVE, DECEASED, MERGED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "ACTIVE",
+            "INACTIVE",
+            "DECEASED",
+            "MERGED"
+          ],
+          "options": [
+            "ACTIVE",
+            "INACTIVE",
+            "DECEASED",
+            "MERGED"
+          ]
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "mergedIntoPatient",
+          "type": "belongsTo",
+          "sourceModel": "HltPatient",
+          "sourceField": "mergedIntoPatientId",
+          "targetModel": "HltPatient",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "HltPatient mergedIntoPatient foreign key link to HltPatient."
+        }
+      ]
+    },
+    {
+      "name": "HltEncounterNote",
+      "title": "Encounter Note",
+      "description": "**Clinical Safety Invariant:** Cannot transition to `SIGNED_LOCKED` while `ambientDraftStatus == AI_DRAFT_UNVERIFIED` or without licensed clinician credential; once `SIGNED_LOCKED`, `vitals` and `soapSections` are permanently immutable (only `addenda` append allowed, moving status to `AMENDED`).",
+      "domainName": "Rapider Healthcare Suite",
+      "domainKey": "HLT",
+      "datatableName": "HltEncounterNote",
+      "dataTableName": "HltEncounterNote",
+      "sqlTableName": "hlt_encounter_note",
+      "isolationScope": "HIPAA_CLINICAL_PHI_ISOLATED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Encounter Note, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "encounterNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "encounterType",
+          "type": "string",
+          "description": "Allowed values: AMBULATORY_VISIT, TELEHEALTH, URGENT_CARE, PROCEDURE, ANNUAL_WELLNESS, TRANSITION_OF_CARE",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "AMBULATORY_VISIT",
+            "TELEHEALTH",
+            "URGENT_CARE",
+            "PROCEDURE",
+            "ANNUAL_WELLNESS",
+            "TRANSITION_OF_CARE"
+          ],
+          "options": [
+            "AMBULATORY_VISIT",
+            "TELEHEALTH",
+            "URGENT_CARE",
+            "PROCEDURE",
+            "ANNUAL_WELLNESS",
+            "TRANSITION_OF_CARE"
+          ]
+        },
+        {
+          "name": "encounterDate",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "chiefComplaint",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "vitals",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "diastolicBp",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "heartRate",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "respRate",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "tempCelsius",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "spo2Pct",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "weightKg",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "heightCm",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "bmi",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "soapSections",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "objective",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "assessment",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "plan",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ambientDraftStatus",
+          "type": "string",
+          "description": "Allowed values: NONE, AI_DRAFT_UNVERIFIED, CLINICIAN_REVIEWED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "NONE",
+            "AI_DRAFT_UNVERIFIED",
+            "CLINICIAN_REVIEWED"
+          ],
+          "options": [
+            "NONE",
+            "AI_DRAFT_UNVERIFIED",
+            "CLINICIAN_REVIEWED"
+          ]
+        },
+        {
+          "name": "assessmentIcd10Codes",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "suggestedCptCodes",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "signedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "cosignedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "addenda",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Allowed values: OPEN, PENDING_COSIGN, SIGNED_LOCKED, AMENDED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "OPEN",
+            "PENDING_COSIGN",
+            "SIGNED_LOCKED",
+            "AMENDED"
+          ],
+          "options": [
+            "OPEN",
+            "PENDING_COSIGN",
+            "SIGNED_LOCKED",
+            "AMENDED"
+          ]
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "patient",
+          "type": "belongsTo",
+          "sourceModel": "HltEncounterNote",
+          "sourceField": "patientId",
+          "targetModel": "HltPatient",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "HltEncounterNote patient foreign key link to HltPatient."
+        }
+      ]
+    },
+    {
+      "name": "HltProblemCondition",
+      "title": "Problem Condition",
+      "description": "`RESOLVED` requires `abatementDate`; active chronic problems surface automatically on Chart 360 facesheet and encounter assessment pickers.",
+      "domainName": "Rapider Healthcare Suite",
+      "domainKey": "HLT",
+      "datatableName": "HltProblemCondition",
+      "dataTableName": "HltProblemCondition",
+      "sqlTableName": "hlt_problem_condition",
+      "isolationScope": "HIPAA_CLINICAL_PHI_ISOLATED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Problem Condition, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "snomedCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "icd10Code",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "displayName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "clinicalStatus",
+          "type": "string",
+          "description": "Allowed values: ACTIVE, RECURRENCE, RELAPSE, INACTIVE, REMISSION, RESOLVED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "ACTIVE",
+            "RECURRENCE",
+            "RELAPSE",
+            "INACTIVE",
+            "REMISSION",
+            "RESOLVED"
+          ],
+          "options": [
+            "ACTIVE",
+            "RECURRENCE",
+            "RELAPSE",
+            "INACTIVE",
+            "REMISSION",
+            "RESOLVED"
+          ]
+        },
+        {
+          "name": "verificationStatus",
+          "type": "string",
+          "description": "Allowed values: CONFIRMED, PROVISIONAL, DIFFERENTIAL, REFUTED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "CONFIRMED",
+            "PROVISIONAL",
+            "DIFFERENTIAL",
+            "REFUTED"
+          ],
+          "options": [
+            "CONFIRMED",
+            "PROVISIONAL",
+            "DIFFERENTIAL",
+            "REFUTED"
+          ]
+        },
+        {
+          "name": "chronicity",
+          "type": "string",
+          "description": "Allowed values: ACUTE, CHRONIC, HEALTH_MAINTENANCE",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "ACUTE",
+            "CHRONIC",
+            "HEALTH_MAINTENANCE"
+          ],
+          "options": [
+            "ACUTE",
+            "CHRONIC",
+            "HEALTH_MAINTENANCE"
+          ]
+        },
+        {
+          "name": "onsetDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "abatementDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "clinicalNotes",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "patient",
+          "type": "belongsTo",
+          "sourceModel": "HltProblemCondition",
+          "sourceField": "patientId",
+          "targetModel": "HltPatient",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "HltProblemCondition patient foreign key link to HltPatient."
+        }
+      ]
+    },
+    {
+      "name": "HltAllergyIntolerance",
+      "title": "Allergy Intolerance",
+      "description": "Adding an `ACTIVE` allergy automatically clears `HltPatient.nkaVerifiedAt`; records are never hard-deleted (`ENTERED_IN_ERROR` preserves medico-legal audit history).",
+      "domainName": "Rapider Healthcare Suite",
+      "domainKey": "HLT",
+      "datatableName": "HltAllergyIntolerance",
+      "dataTableName": "HltAllergyIntolerance",
+      "sqlTableName": "hlt_allergy_intolerance",
+      "isolationScope": "HIPAA_CLINICAL_PHI_ISOLATED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Allergy Intolerance, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "substanceRxNormOrSnomed",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "substanceName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Allowed values: MEDICATION, FOOD, BIOLOGIC, ENVIRONMENT",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "MEDICATION",
+            "FOOD",
+            "BIOLOGIC",
+            "ENVIRONMENT"
+          ],
+          "options": [
+            "MEDICATION",
+            "FOOD",
+            "BIOLOGIC",
+            "ENVIRONMENT"
+          ]
+        },
+        {
+          "name": "criticality",
+          "type": "string",
+          "description": "Allowed values: LOW, HIGH, LIFE_THREATENING_UNABLE_TO_ASSESS",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "LOW",
+            "HIGH",
+            "LIFE_THREATENING_UNABLE_TO_ASSESS"
+          ],
+          "options": [
+            "LOW",
+            "HIGH",
+            "LIFE_THREATENING_UNABLE_TO_ASSESS"
+          ]
+        },
+        {
+          "name": "severity",
+          "type": "string",
+          "description": "Allowed values: MILD, MODERATE, SEVERE, ANAPHYLAXIS",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "MILD",
+            "MODERATE",
+            "SEVERE",
+            "ANAPHYLAXIS"
+          ],
+          "options": [
+            "MILD",
+            "MODERATE",
+            "SEVERE",
+            "ANAPHYLAXIS"
+          ]
+        },
+        {
+          "name": "reactionManifestations",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "clinicalStatus",
+          "type": "string",
+          "description": "Allowed values: ACTIVE, INACTIVE, ENTERED_IN_ERROR",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "ACTIVE",
+            "INACTIVE",
+            "ENTERED_IN_ERROR"
+          ],
+          "options": [
+            "ACTIVE",
+            "INACTIVE",
+            "ENTERED_IN_ERROR"
+          ]
+        },
+        {
+          "name": "recordedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "patient",
+          "type": "belongsTo",
+          "sourceModel": "HltAllergyIntolerance",
+          "sourceField": "patientId",
+          "targetModel": "HltPatient",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "HltAllergyIntolerance patient foreign key link to HltPatient."
+        }
+      ]
+    },
+    {
+      "name": "HltMedicationPrescription",
+      "title": "Medication Prescription",
+      "description": "**EPCS & CDS Invariant:** Severe drug-allergy/drug-drug alerts block transition to `ACTIVE_TRANSMITTED` unless `overrideReason` is populated by a licensed prescriber; `deaSchedule != NON_CONTROLLED` requires `epcsTwoFactorVerifiedAt != null`.",
+      "domainName": "Rapider Healthcare Suite",
+      "domainKey": "HLT",
+      "datatableName": "HltMedicationPrescription",
+      "dataTableName": "HltMedicationPrescription",
+      "sqlTableName": "hlt_medication_prescription",
+      "isolationScope": "HIPAA_CLINICAL_PHI_ISOLATED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Medication Prescription, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "rxNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "rxNormCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "medicationName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "dosageStrength",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "dosageUnit",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "route",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "frequencySig",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "dispenseQuantity",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "daysSupply",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "refillsAuthorized",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "deaSchedule",
+          "type": "string",
+          "description": "Allowed values: NON_CONTROLLED, C_II, C_III, C_IV, C_V",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "NON_CONTROLLED",
+            "C_II",
+            "C_III",
+            "C_IV",
+            "C_V"
+          ],
+          "options": [
+            "NON_CONTROLLED",
+            "C_II",
+            "C_III",
+            "C_IV",
+            "C_V"
+          ]
+        },
+        {
+          "name": "pharmacyName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "pharmacyPhone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "cdsAlertsTriggered",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "epcsTwoFactorVerifiedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Allowed values: DRAFT, PENDING_SIGN, ACTIVE_TRANSMITTED, HOME_REPORTED, COMPLETED, DISCONTINUED, CANCELLED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "DRAFT",
+            "PENDING_SIGN",
+            "ACTIVE_TRANSMITTED",
+            "HOME_REPORTED",
+            "COMPLETED",
+            "DISCONTINUED",
+            "CANCELLED"
+          ],
+          "options": [
+            "DRAFT",
+            "PENDING_SIGN",
+            "ACTIVE_TRANSMITTED",
+            "HOME_REPORTED",
+            "COMPLETED",
+            "DISCONTINUED",
+            "CANCELLED"
+          ]
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "patient",
+          "type": "belongsTo",
+          "sourceModel": "HltMedicationPrescription",
+          "sourceField": "patientId",
+          "targetModel": "HltPatient",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "HltMedicationPrescription patient foreign key link to HltPatient."
+        }
+      ]
+    },
+    {
+      "name": "HltDiagnosticOrderResult",
+      "title": "Diagnostic Order Result",
+      "description": "Requires >= 1 `diagnosisIcd10Pointers` before `ORDERED`; arrival of any `CRITICAL_PANIC` observation auto-creates a high-priority Home `WorkItem` and forbids silent dismissal without `reviewedByProviderAt`.",
+      "domainName": "Rapider Healthcare Suite",
+      "domainKey": "HLT",
+      "datatableName": "HltDiagnosticOrderResult",
+      "dataTableName": "HltDiagnosticOrderResult",
+      "sqlTableName": "hlt_diagnostic_order_result",
+      "isolationScope": "HIPAA_CLINICAL_PHI_ISOLATED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Diagnostic Order Result, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "accessionNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Allowed values: LABORATORY, IMAGING, CARDIOLOGY, PATHOLOGY",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "LABORATORY",
+            "IMAGING",
+            "CARDIOLOGY",
+            "PATHOLOGY"
+          ],
+          "options": [
+            "LABORATORY",
+            "IMAGING",
+            "CARDIOLOGY",
+            "PATHOLOGY"
+          ]
+        },
+        {
+          "name": "loincOrCptCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "orderDisplayName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "priority",
+          "type": "string",
+          "description": "Allowed values: ROUTINE, URGENT, STAT",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "ROUTINE",
+            "URGENT",
+            "STAT"
+          ],
+          "options": [
+            "ROUTINE",
+            "URGENT",
+            "STAT"
+          ]
+        },
+        {
+          "name": "diagnosisIcd10Pointers",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "discreteObservations",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "numericValue",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "textValue",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "unit",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "refRangeLow",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "refRangeHigh",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "abnormalFlag",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "narrativeImpression",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "curesActReleaseHoldReason",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "reviewedByProviderAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Allowed values: DRAFT, ORDERED, SPECIMEN_COLLECTED, PARTIAL_RESULT, FINAL_RESULT, REVIEWED_SIGNED, CANCELLED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "DRAFT",
+            "ORDERED",
+            "SPECIMEN_COLLECTED",
+            "PARTIAL_RESULT",
+            "FINAL_RESULT",
+            "REVIEWED_SIGNED",
+            "CANCELLED"
+          ],
+          "options": [
+            "DRAFT",
+            "ORDERED",
+            "SPECIMEN_COLLECTED",
+            "PARTIAL_RESULT",
+            "FINAL_RESULT",
+            "REVIEWED_SIGNED",
+            "CANCELLED"
+          ]
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "patient",
+          "type": "belongsTo",
+          "sourceModel": "HltDiagnosticOrderResult",
+          "sourceField": "patientId",
+          "targetModel": "HltPatient",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "HltDiagnosticOrderResult patient foreign key link to HltPatient."
+        }
+      ]
+    },
+    {
+      "name": "HltCarePlanQualityGap",
+      "title": "Care Plan Quality Gap",
+      "description": "`EXCLUDED_CONTRAINDICATED` requires documented clinical exclusion reason; closing via qualifying `HltDiagnosticOrderResult` or `HltEncounterNote` records `closureEvidenceRef`.",
+      "domainName": "Rapider Healthcare Suite",
+      "domainKey": "HLT",
+      "datatableName": "HltCarePlanQualityGap",
+      "dataTableName": "HltCarePlanQualityGap",
+      "sqlTableName": "hlt_care_plan_quality_gap",
+      "isolationScope": "HIPAA_CLINICAL_PHI_ISOLATED",
+      "titleFieldTemplate": "{{ title }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "title"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Care Plan Quality Gap, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "itemType",
+          "type": "string",
+          "description": "Allowed values: CARE_GOAL, IMMUNIZATION_CVX, HEDIS_MIPS_GAP, PREVENTIVE_RECALL",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "CARE_GOAL",
+            "IMMUNIZATION_CVX",
+            "HEDIS_MIPS_GAP",
+            "PREVENTIVE_RECALL"
+          ],
+          "options": [
+            "CARE_GOAL",
+            "IMMUNIZATION_CVX",
+            "HEDIS_MIPS_GAP",
+            "PREVENTIVE_RECALL"
+          ]
+        },
+        {
+          "name": "measureOrCvxCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "targetMetricText",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "dueDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "closedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "closureEvidenceRef",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Allowed values: OPEN_DUE, OVERDUE, IN_PROGRESS, CLOSED_MET, EXCLUDED_CONTRAINDICATED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "OPEN_DUE",
+            "OVERDUE",
+            "IN_PROGRESS",
+            "CLOSED_MET",
+            "EXCLUDED_CONTRAINDICATED"
+          ],
+          "options": [
+            "OPEN_DUE",
+            "OVERDUE",
+            "IN_PROGRESS",
+            "CLOSED_MET",
+            "EXCLUDED_CONTRAINDICATED"
+          ]
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "patient",
+          "type": "belongsTo",
+          "sourceModel": "HltCarePlanQualityGap",
+          "sourceField": "patientId",
+          "targetModel": "HltPatient",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "HltCarePlanQualityGap patient foreign key link to HltPatient."
+        }
+      ]
+    },
+    {
+      "name": "HltFhirExchangeBreakGlassLog",
+      "title": "Fhir Exchange Break Glass Log",
+      "description": "**Append-Only Audit Invariant:** `BREAK_GLASS_ACCESS` entries are strictly append-only immutable, expire automatically at `grantExpiresAt` (max 4 hours), and emit a Privacy Officer Home `WorkItem`.",
+      "domainName": "Rapider Healthcare Suite",
+      "domainKey": "HLT",
+      "datatableName": "HltFhirExchangeBreakGlassLog",
+      "dataTableName": "HltFhirExchangeBreakGlassLog",
+      "sqlTableName": "hlt_fhir_exchange_break_glass_log",
+      "isolationScope": "HIPAA_CLINICAL_PHI_ISOLATED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Fhir Exchange Break Glass Log, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "recordKind",
+          "type": "string",
+          "description": "Allowed values: FHIR_R4_EXPORT, FHIR_R4_IMPORT, CCDA_IMPORT, ADT_EVENT, BREAK_GLASS_ACCESS, DSI_FEEDBACK",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "FHIR_R4_EXPORT",
+            "FHIR_R4_IMPORT",
+            "CCDA_IMPORT",
+            "ADT_EVENT",
+            "BREAK_GLASS_ACCESS",
+            "DSI_FEEDBACK"
+          ],
+          "options": [
+            "FHIR_R4_EXPORT",
+            "FHIR_R4_IMPORT",
+            "CCDA_IMPORT",
+            "ADT_EVENT",
+            "BREAK_GLASS_ACCESS",
+            "DSI_FEEDBACK"
+          ]
+        },
+        {
+          "name": "externalSourceSystem",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "fhirResourceSummary",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "reconciliationStatus",
+          "type": "string",
+          "description": "Allowed values: NOT_APPLICABLE, STAGED_FOR_REVIEW, RECONCILED, REJECTED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "NOT_APPLICABLE",
+            "STAGED_FOR_REVIEW",
+            "RECONCILED",
+            "REJECTED"
+          ],
+          "options": [
+            "NOT_APPLICABLE",
+            "STAGED_FOR_REVIEW",
+            "RECONCILED",
+            "REJECTED"
+          ]
+        },
+        {
+          "name": "breakGlassReasonCode",
+          "type": "string",
+          "description": "Allowed values: NONE, EMERGENCY_CARE, ON_CALL_COVERAGE, PATIENT_REQUEST, COMPLIANCE_INVESTIGATION",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "NONE",
+            "EMERGENCY_CARE",
+            "ON_CALL_COVERAGE",
+            "PATIENT_REQUEST",
+            "COMPLIANCE_INVESTIGATION"
+          ],
+          "options": [
+            "NONE",
+            "EMERGENCY_CARE",
+            "ON_CALL_COVERAGE",
+            "PATIENT_REQUEST",
+            "COMPLIANCE_INVESTIGATION"
+          ]
+        },
+        {
+          "name": "breakGlassJustification",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "grantExpiresAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "occurredAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "patient",
+          "type": "belongsTo",
+          "sourceModel": "HltFhirExchangeBreakGlassLog",
+          "sourceField": "patientId",
+          "targetModel": "HltPatient",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "HltFhirExchangeBreakGlassLog patient foreign key link to HltPatient."
+        }
+      ]
+    }
+  ],
   "variables": [],
   "tools": [],
   "workflows": [],
