@@ -1,0 +1,699 @@
+{
+  "HrDepartment": [
+    {
+      "id": "00000000-0151-0001-0000-000000000001",
+      "name": "Department #1 — Enterprise Primary Record",
+      "code": "HD-2026-0001",
+      "description": "Department description configuration (1)",
+      "headId": "00000000-0151-0001-0000-000000000001",
+      "parentDepartmentId": "00000000-0151-0001-0000-000000000001",
+      "legalEntityId": "00000000-0151-0001-0000-000000000001",
+      "costCenterCode": "HD-2026-0001",
+      "status": "ACTIVE",
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0001-0000-000000000002",
+      "name": "Department #2 — Enterprise Operations Record",
+      "code": "HD-2026-0002",
+      "description": "Department description configuration (2)",
+      "headId": "00000000-0151-0001-0000-000000000002",
+      "parentDepartmentId": "00000000-0151-0001-0000-000000000002",
+      "legalEntityId": "00000000-0151-0001-0000-000000000002",
+      "costCenterCode": "HD-2026-0002",
+      "status": "IN_PROGRESS",
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0001-0000-000000000003",
+      "name": "Department #3 — Enterprise Compliance Record",
+      "code": "HD-2026-0003",
+      "description": "Department description configuration (3)",
+      "headId": "00000000-0151-0001-0000-000000000003",
+      "parentDepartmentId": "00000000-0151-0001-0000-000000000003",
+      "legalEntityId": "00000000-0151-0001-0000-000000000003",
+      "costCenterCode": "HD-2026-0003",
+      "status": "COMPLETED",
+      "isDeleted": false
+    }
+  ],
+  "HrEmployee": [
+    {
+      "id": "00000000-0151-0002-0000-000000000001",
+      "employeeNumber": "HE-2026-0001",
+      "firstName": "Employee #1 — Enterprise Primary Record",
+      "lastName": "Employee #1 — Enterprise Primary Record",
+      "preferredName": "Employee #1 — Enterprise Primary Record",
+      "email": "ops-team-1@rapider-enterprise.io",
+      "personalEmail": "ops-team-1@rapider-enterprise.io",
+      "phone": "+1-555-019-2801",
+      "jobTitle": "Employee #1 — Enterprise Primary Record",
+      "status": "ACTIVE",
+      "workerType": "Employee workerType configuration (1)",
+      "employmentType": "Employee employmentType configuration (1)",
+      "hireDate": "2026-11-01T10:00:00Z",
+      "startDate": "2026-11-01T10:00:00Z",
+      "endDate": "2026-11-01T10:00:00Z",
+      "departmentId": "00000000-0151-0001-0000-000000000001",
+      "managerId": "00000000-0151-0001-0000-000000000001",
+      "positionId": "00000000-0151-0001-0000-000000000001",
+      "jobProfileId": "00000000-0151-0001-0000-000000000001",
+      "locationId": "00000000-0151-0001-0000-000000000001",
+      "legalEntityId": "00000000-0151-0001-0000-000000000001",
+      "weeklyHours": 10,
+      "timeZone": "Employee timeZone configuration (1)",
+      "avatarColor": "Employee avatarColor configuration (1)",
+      "notes": "Employee notes configuration (1)",
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0002-0000-000000000002",
+      "employeeNumber": "HE-2026-0002",
+      "firstName": "Employee #2 — Enterprise Operations Record",
+      "lastName": "Employee #2 — Enterprise Operations Record",
+      "preferredName": "Employee #2 — Enterprise Operations Record",
+      "email": "ops-team-2@rapider-enterprise.io",
+      "personalEmail": "ops-team-2@rapider-enterprise.io",
+      "phone": "+1-555-019-2802",
+      "jobTitle": "Employee #2 — Enterprise Operations Record",
+      "status": "IN_PROGRESS",
+      "workerType": "Employee workerType configuration (2)",
+      "employmentType": "Employee employmentType configuration (2)",
+      "hireDate": "2026-11-02T10:00:00Z",
+      "startDate": "2026-11-02T10:00:00Z",
+      "endDate": "2026-11-02T10:00:00Z",
+      "departmentId": "00000000-0151-0001-0000-000000000002",
+      "managerId": "00000000-0151-0001-0000-000000000002",
+      "positionId": "00000000-0151-0001-0000-000000000002",
+      "jobProfileId": "00000000-0151-0001-0000-000000000002",
+      "locationId": "00000000-0151-0001-0000-000000000002",
+      "legalEntityId": "00000000-0151-0001-0000-000000000002",
+      "weeklyHours": 20,
+      "timeZone": "Employee timeZone configuration (2)",
+      "avatarColor": "Employee avatarColor configuration (2)",
+      "notes": "Employee notes configuration (2)",
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0002-0000-000000000003",
+      "employeeNumber": "HE-2026-0003",
+      "firstName": "Employee #3 — Enterprise Compliance Record",
+      "lastName": "Employee #3 — Enterprise Compliance Record",
+      "preferredName": "Employee #3 — Enterprise Compliance Record",
+      "email": "ops-team-3@rapider-enterprise.io",
+      "personalEmail": "ops-team-3@rapider-enterprise.io",
+      "phone": "+1-555-019-2803",
+      "jobTitle": "Employee #3 — Enterprise Compliance Record",
+      "status": "COMPLETED",
+      "workerType": "Employee workerType configuration (3)",
+      "employmentType": "Employee employmentType configuration (3)",
+      "hireDate": "2026-11-03T10:00:00Z",
+      "startDate": "2026-11-03T10:00:00Z",
+      "endDate": "2026-11-03T10:00:00Z",
+      "departmentId": "00000000-0151-0001-0000-000000000003",
+      "managerId": "00000000-0151-0001-0000-000000000003",
+      "positionId": "00000000-0151-0001-0000-000000000003",
+      "jobProfileId": "00000000-0151-0001-0000-000000000003",
+      "locationId": "00000000-0151-0001-0000-000000000003",
+      "legalEntityId": "00000000-0151-0001-0000-000000000003",
+      "weeklyHours": 30,
+      "timeZone": "Employee timeZone configuration (3)",
+      "avatarColor": "Employee avatarColor configuration (3)",
+      "notes": "Employee notes configuration (3)",
+      "isDeleted": false
+    }
+  ],
+  "HrLocation": [
+    {
+      "id": "00000000-0151-0003-0000-000000000001",
+      "code": "HL-2026-0001",
+      "name": "Location #1 — Enterprise Primary Record",
+      "countryCode": "HL-2026-0001",
+      "region": "Location region configuration (1)",
+      "city": "Location city configuration (1)",
+      "postalCode": "HL-2026-0001",
+      "timeZone": "Location timeZone configuration (1)",
+      "locationType": "Location locationType configuration (1)",
+      "status": "ACTIVE",
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0003-0000-000000000002",
+      "code": "HL-2026-0002",
+      "name": "Location #2 — Enterprise Operations Record",
+      "countryCode": "HL-2026-0002",
+      "region": "Location region configuration (2)",
+      "city": "Location city configuration (2)",
+      "postalCode": "HL-2026-0002",
+      "timeZone": "Location timeZone configuration (2)",
+      "locationType": "Location locationType configuration (2)",
+      "status": "IN_PROGRESS",
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0003-0000-000000000003",
+      "code": "HL-2026-0003",
+      "name": "Location #3 — Enterprise Compliance Record",
+      "countryCode": "HL-2026-0003",
+      "region": "Location region configuration (3)",
+      "city": "Location city configuration (3)",
+      "postalCode": "HL-2026-0003",
+      "timeZone": "Location timeZone configuration (3)",
+      "locationType": "Location locationType configuration (3)",
+      "status": "COMPLETED",
+      "isDeleted": false
+    }
+  ],
+  "HltPatient": [
+    {
+      "id": "00000000-0151-0004-0000-000000000001",
+      "mrn": "Patient mrn configuration (1)",
+      "legalFirstName": "Patient #1 — Enterprise Primary Record",
+      "legalLastName": "Patient #1 — Enterprise Primary Record",
+      "chosenName": "Patient #1 — Enterprise Primary Record",
+      "dateOfBirth": "2026-11-01T10:00:00Z",
+      "administrativeSex": "Patient administrativeSex configuration (1)",
+      "genderIdentity": "Patient genderIdentity configuration (1)",
+      "preferredLanguage": "Patient preferredLanguage configuration (1)",
+      "mobilePhone": "+1-555-019-2801",
+      "emergencyContactPhone": "+1-555-019-2801",
+      "sdohRiskFlags": [
+        "item-1-a",
+        "item-1-b"
+      ],
+      "nkaVerifiedAt": "2026-11-01T10:00:00Z",
+      "codeStatus": "HP-2026-0001",
+      "isRestrictedChart": true,
+      "status": "ACTIVE",
+      "version": 1,
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0004-0000-000000000002",
+      "mrn": "Patient mrn configuration (2)",
+      "legalFirstName": "Patient #2 — Enterprise Operations Record",
+      "legalLastName": "Patient #2 — Enterprise Operations Record",
+      "chosenName": "Patient #2 — Enterprise Operations Record",
+      "dateOfBirth": "2026-11-02T10:00:00Z",
+      "administrativeSex": "Patient administrativeSex configuration (2)",
+      "genderIdentity": "Patient genderIdentity configuration (2)",
+      "preferredLanguage": "Patient preferredLanguage configuration (2)",
+      "mobilePhone": "+1-555-019-2802",
+      "emergencyContactPhone": "+1-555-019-2802",
+      "sdohRiskFlags": [
+        "item-2-a",
+        "item-2-b"
+      ],
+      "nkaVerifiedAt": "2026-11-02T10:00:00Z",
+      "codeStatus": "HP-2026-0002",
+      "isRestrictedChart": true,
+      "status": "IN_PROGRESS",
+      "version": 2,
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0004-0000-000000000003",
+      "mrn": "Patient mrn configuration (3)",
+      "legalFirstName": "Patient #3 — Enterprise Compliance Record",
+      "legalLastName": "Patient #3 — Enterprise Compliance Record",
+      "chosenName": "Patient #3 — Enterprise Compliance Record",
+      "dateOfBirth": "2026-11-03T10:00:00Z",
+      "administrativeSex": "Patient administrativeSex configuration (3)",
+      "genderIdentity": "Patient genderIdentity configuration (3)",
+      "preferredLanguage": "Patient preferredLanguage configuration (3)",
+      "mobilePhone": "+1-555-019-2803",
+      "emergencyContactPhone": "+1-555-019-2803",
+      "sdohRiskFlags": [
+        "item-3-a",
+        "item-3-b"
+      ],
+      "nkaVerifiedAt": "2026-11-03T10:00:00Z",
+      "codeStatus": "HP-2026-0003",
+      "isRestrictedChart": false,
+      "status": "COMPLETED",
+      "version": 3,
+      "isDeleted": false
+    }
+  ],
+  "HltEncounterNote": [
+    {
+      "id": "00000000-0151-0005-0000-000000000001",
+      "encounterNumber": "HEN-2026-0001",
+      "encounterType": "Encounter Note encounterType configuration (1)",
+      "encounterDate": "2026-11-01T10:00:00Z",
+      "chiefComplaint": "Encounter Note chiefComplaint configuration (1)",
+      "vitals": "Encounter Note vitals configuration (1)",
+      "diastolicBp": 10,
+      "heartRate": 85,
+      "respRate": 85,
+      "tempCelsius": 10,
+      "spo2Pct": 85,
+      "weightKg": 10,
+      "heightCm": 10,
+      "bmi": 10,
+      "soapSections": "Encounter Note soapSections configuration (1)",
+      "objective": "Encounter Note objective configuration (1)",
+      "assessment": "Encounter Note assessment configuration (1)",
+      "plan": "Encounter Note plan configuration (1)",
+      "ambientDraftStatus": "Encounter Note ambientDraftStatus configuration (1)",
+      "assessmentIcd10Codes": [
+        "item-1-a",
+        "item-1-b"
+      ],
+      "suggestedCptCodes": [
+        "item-1-a",
+        "item-1-b"
+      ],
+      "signedAt": "2026-11-01T10:00:00Z",
+      "cosignedAt": "2026-11-01T10:00:00Z",
+      "addenda": [
+        "item-1-a",
+        "item-1-b"
+      ],
+      "status": "ACTIVE",
+      "version": 1,
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0005-0000-000000000002",
+      "encounterNumber": "HEN-2026-0002",
+      "encounterType": "Encounter Note encounterType configuration (2)",
+      "encounterDate": "2026-11-02T10:00:00Z",
+      "chiefComplaint": "Encounter Note chiefComplaint configuration (2)",
+      "vitals": "Encounter Note vitals configuration (2)",
+      "diastolicBp": 20,
+      "heartRate": 90,
+      "respRate": 90,
+      "tempCelsius": 20,
+      "spo2Pct": 90,
+      "weightKg": 20,
+      "heightCm": 20,
+      "bmi": 20,
+      "soapSections": "Encounter Note soapSections configuration (2)",
+      "objective": "Encounter Note objective configuration (2)",
+      "assessment": "Encounter Note assessment configuration (2)",
+      "plan": "Encounter Note plan configuration (2)",
+      "ambientDraftStatus": "Encounter Note ambientDraftStatus configuration (2)",
+      "assessmentIcd10Codes": [
+        "item-2-a",
+        "item-2-b"
+      ],
+      "suggestedCptCodes": [
+        "item-2-a",
+        "item-2-b"
+      ],
+      "signedAt": "2026-11-02T10:00:00Z",
+      "cosignedAt": "2026-11-02T10:00:00Z",
+      "addenda": [
+        "item-2-a",
+        "item-2-b"
+      ],
+      "status": "IN_PROGRESS",
+      "version": 2,
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0005-0000-000000000003",
+      "encounterNumber": "HEN-2026-0003",
+      "encounterType": "Encounter Note encounterType configuration (3)",
+      "encounterDate": "2026-11-03T10:00:00Z",
+      "chiefComplaint": "Encounter Note chiefComplaint configuration (3)",
+      "vitals": "Encounter Note vitals configuration (3)",
+      "diastolicBp": 30,
+      "heartRate": 95,
+      "respRate": 95,
+      "tempCelsius": 30,
+      "spo2Pct": 95,
+      "weightKg": 30,
+      "heightCm": 30,
+      "bmi": 30,
+      "soapSections": "Encounter Note soapSections configuration (3)",
+      "objective": "Encounter Note objective configuration (3)",
+      "assessment": "Encounter Note assessment configuration (3)",
+      "plan": "Encounter Note plan configuration (3)",
+      "ambientDraftStatus": "Encounter Note ambientDraftStatus configuration (3)",
+      "assessmentIcd10Codes": [
+        "item-3-a",
+        "item-3-b"
+      ],
+      "suggestedCptCodes": [
+        "item-3-a",
+        "item-3-b"
+      ],
+      "signedAt": "2026-11-03T10:00:00Z",
+      "cosignedAt": "2026-11-03T10:00:00Z",
+      "addenda": [
+        "item-3-a",
+        "item-3-b"
+      ],
+      "status": "COMPLETED",
+      "version": 3,
+      "isDeleted": false
+    }
+  ],
+  "HltProblemCondition": [
+    {
+      "id": "00000000-0151-0006-0000-000000000001",
+      "snomedCode": "HPC-2026-0001",
+      "icd10Code": "HPC-2026-0001",
+      "displayName": "Problem Condition #1 — Enterprise Primary Record",
+      "clinicalStatus": "Problem Condition clinicalStatus configuration (1)",
+      "verificationStatus": "Problem Condition verificationStatus configuration (1)",
+      "chronicity": "Problem Condition chronicity configuration (1)",
+      "onsetDate": "2026-11-01T10:00:00Z",
+      "abatementDate": "2026-11-01T10:00:00Z",
+      "clinicalNotes": "Problem Condition clinicalNotes configuration (1)",
+      "version": 1,
+      "status": "ACTIVE",
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0006-0000-000000000002",
+      "snomedCode": "HPC-2026-0002",
+      "icd10Code": "HPC-2026-0002",
+      "displayName": "Problem Condition #2 — Enterprise Operations Record",
+      "clinicalStatus": "Problem Condition clinicalStatus configuration (2)",
+      "verificationStatus": "Problem Condition verificationStatus configuration (2)",
+      "chronicity": "Problem Condition chronicity configuration (2)",
+      "onsetDate": "2026-11-02T10:00:00Z",
+      "abatementDate": "2026-11-02T10:00:00Z",
+      "clinicalNotes": "Problem Condition clinicalNotes configuration (2)",
+      "version": 2,
+      "status": "IN_PROGRESS",
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0006-0000-000000000003",
+      "snomedCode": "HPC-2026-0003",
+      "icd10Code": "HPC-2026-0003",
+      "displayName": "Problem Condition #3 — Enterprise Compliance Record",
+      "clinicalStatus": "Problem Condition clinicalStatus configuration (3)",
+      "verificationStatus": "Problem Condition verificationStatus configuration (3)",
+      "chronicity": "Problem Condition chronicity configuration (3)",
+      "onsetDate": "2026-11-03T10:00:00Z",
+      "abatementDate": "2026-11-03T10:00:00Z",
+      "clinicalNotes": "Problem Condition clinicalNotes configuration (3)",
+      "version": 3,
+      "status": "COMPLETED",
+      "isDeleted": false
+    }
+  ],
+  "HltAllergyIntolerance": [
+    {
+      "id": "00000000-0151-0007-0000-000000000001",
+      "substanceRxNormOrSnomed": "Allergy Intolerance substanceRxNormOrSnomed configuration (1)",
+      "substanceName": "Allergy Intolerance #1 — Enterprise Primary Record",
+      "category": "Allergy Intolerance category configuration (1)",
+      "criticality": "Allergy Intolerance criticality configuration (1)",
+      "severity": "Allergy Intolerance severity configuration (1)",
+      "reactionManifestations": [
+        "item-1-a",
+        "item-1-b"
+      ],
+      "clinicalStatus": "Allergy Intolerance clinicalStatus configuration (1)",
+      "recordedAt": "2026-11-01T10:00:00Z",
+      "version": 1,
+      "status": "ACTIVE",
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0007-0000-000000000002",
+      "substanceRxNormOrSnomed": "Allergy Intolerance substanceRxNormOrSnomed configuration (2)",
+      "substanceName": "Allergy Intolerance #2 — Enterprise Operations Record",
+      "category": "Allergy Intolerance category configuration (2)",
+      "criticality": "Allergy Intolerance criticality configuration (2)",
+      "severity": "Allergy Intolerance severity configuration (2)",
+      "reactionManifestations": [
+        "item-2-a",
+        "item-2-b"
+      ],
+      "clinicalStatus": "Allergy Intolerance clinicalStatus configuration (2)",
+      "recordedAt": "2026-11-02T10:00:00Z",
+      "version": 2,
+      "status": "IN_PROGRESS",
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0007-0000-000000000003",
+      "substanceRxNormOrSnomed": "Allergy Intolerance substanceRxNormOrSnomed configuration (3)",
+      "substanceName": "Allergy Intolerance #3 — Enterprise Compliance Record",
+      "category": "Allergy Intolerance category configuration (3)",
+      "criticality": "Allergy Intolerance criticality configuration (3)",
+      "severity": "Allergy Intolerance severity configuration (3)",
+      "reactionManifestations": [
+        "item-3-a",
+        "item-3-b"
+      ],
+      "clinicalStatus": "Allergy Intolerance clinicalStatus configuration (3)",
+      "recordedAt": "2026-11-03T10:00:00Z",
+      "version": 3,
+      "status": "COMPLETED",
+      "isDeleted": false
+    }
+  ],
+  "HltMedicationPrescription": [
+    {
+      "id": "00000000-0151-0008-0000-000000000001",
+      "rxNumber": "HMP-2026-0001",
+      "rxNormCode": "HMP-2026-0001",
+      "medicationName": "Medication Prescription #1 — Enterprise Primary Record",
+      "dosageStrength": 10,
+      "dosageUnit": "Medication Prescription dosageUnit configuration (1)",
+      "route": "Medication Prescription route configuration (1)",
+      "frequencySig": "Medication Prescription frequencySig configuration (1)",
+      "dispenseQuantity": 10,
+      "daysSupply": 10,
+      "refillsAuthorized": 10,
+      "deaSchedule": "Medication Prescription deaSchedule configuration (1)",
+      "pharmacyName": "Medication Prescription #1 — Enterprise Primary Record",
+      "pharmacyPhone": "+1-555-019-2801",
+      "cdsAlertsTriggered": [
+        "item-1-a",
+        "item-1-b"
+      ],
+      "epcsTwoFactorVerifiedAt": "2026-11-01T10:00:00Z",
+      "status": "ACTIVE",
+      "version": 1,
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0008-0000-000000000002",
+      "rxNumber": "HMP-2026-0002",
+      "rxNormCode": "HMP-2026-0002",
+      "medicationName": "Medication Prescription #2 — Enterprise Operations Record",
+      "dosageStrength": 20,
+      "dosageUnit": "Medication Prescription dosageUnit configuration (2)",
+      "route": "Medication Prescription route configuration (2)",
+      "frequencySig": "Medication Prescription frequencySig configuration (2)",
+      "dispenseQuantity": 20,
+      "daysSupply": 20,
+      "refillsAuthorized": 20,
+      "deaSchedule": "Medication Prescription deaSchedule configuration (2)",
+      "pharmacyName": "Medication Prescription #2 — Enterprise Operations Record",
+      "pharmacyPhone": "+1-555-019-2802",
+      "cdsAlertsTriggered": [
+        "item-2-a",
+        "item-2-b"
+      ],
+      "epcsTwoFactorVerifiedAt": "2026-11-02T10:00:00Z",
+      "status": "IN_PROGRESS",
+      "version": 2,
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0008-0000-000000000003",
+      "rxNumber": "HMP-2026-0003",
+      "rxNormCode": "HMP-2026-0003",
+      "medicationName": "Medication Prescription #3 — Enterprise Compliance Record",
+      "dosageStrength": 30,
+      "dosageUnit": "Medication Prescription dosageUnit configuration (3)",
+      "route": "Medication Prescription route configuration (3)",
+      "frequencySig": "Medication Prescription frequencySig configuration (3)",
+      "dispenseQuantity": 30,
+      "daysSupply": 30,
+      "refillsAuthorized": 30,
+      "deaSchedule": "Medication Prescription deaSchedule configuration (3)",
+      "pharmacyName": "Medication Prescription #3 — Enterprise Compliance Record",
+      "pharmacyPhone": "+1-555-019-2803",
+      "cdsAlertsTriggered": [
+        "item-3-a",
+        "item-3-b"
+      ],
+      "epcsTwoFactorVerifiedAt": "2026-11-03T10:00:00Z",
+      "status": "COMPLETED",
+      "version": 3,
+      "isDeleted": false
+    }
+  ],
+  "HltDiagnosticOrderResult": [
+    {
+      "id": "00000000-0151-0009-0000-000000000001",
+      "accessionNumber": "HDOR-2026-0001",
+      "category": "Diagnostic Order Result category configuration (1)",
+      "loincOrCptCode": "HDOR-2026-0001",
+      "orderDisplayName": "Diagnostic Order Result #1 — Enterprise Primary Record",
+      "priority": "Diagnostic Order Result priority configuration (1)",
+      "diagnosisIcd10Pointers": [
+        "item-1-a",
+        "item-1-b"
+      ],
+      "discreteObservations": [
+        "item-1-a",
+        "item-1-b"
+      ],
+      "numericValue": 1250,
+      "textValue": "Diagnostic Order Result textValue configuration (1)",
+      "unit": "Diagnostic Order Result unit configuration (1)",
+      "refRangeLow": 10,
+      "refRangeHigh": 10,
+      "abnormalFlag": "Diagnostic Order Result abnormalFlag configuration (1)",
+      "narrativeImpression": "Diagnostic Order Result narrativeImpression configuration (1)",
+      "curesActReleaseHoldReason": "Diagnostic Order Result curesActReleaseHoldReason configuration (1)",
+      "reviewedByProviderAt": "2026-11-01T10:00:00Z",
+      "status": "ACTIVE",
+      "version": 1,
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0009-0000-000000000002",
+      "accessionNumber": "HDOR-2026-0002",
+      "category": "Diagnostic Order Result category configuration (2)",
+      "loincOrCptCode": "HDOR-2026-0002",
+      "orderDisplayName": "Diagnostic Order Result #2 — Enterprise Operations Record",
+      "priority": "Diagnostic Order Result priority configuration (2)",
+      "diagnosisIcd10Pointers": [
+        "item-2-a",
+        "item-2-b"
+      ],
+      "discreteObservations": [
+        "item-2-a",
+        "item-2-b"
+      ],
+      "numericValue": 2500,
+      "textValue": "Diagnostic Order Result textValue configuration (2)",
+      "unit": "Diagnostic Order Result unit configuration (2)",
+      "refRangeLow": 20,
+      "refRangeHigh": 20,
+      "abnormalFlag": "Diagnostic Order Result abnormalFlag configuration (2)",
+      "narrativeImpression": "Diagnostic Order Result narrativeImpression configuration (2)",
+      "curesActReleaseHoldReason": "Diagnostic Order Result curesActReleaseHoldReason configuration (2)",
+      "reviewedByProviderAt": "2026-11-02T10:00:00Z",
+      "status": "IN_PROGRESS",
+      "version": 2,
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0009-0000-000000000003",
+      "accessionNumber": "HDOR-2026-0003",
+      "category": "Diagnostic Order Result category configuration (3)",
+      "loincOrCptCode": "HDOR-2026-0003",
+      "orderDisplayName": "Diagnostic Order Result #3 — Enterprise Compliance Record",
+      "priority": "Diagnostic Order Result priority configuration (3)",
+      "diagnosisIcd10Pointers": [
+        "item-3-a",
+        "item-3-b"
+      ],
+      "discreteObservations": [
+        "item-3-a",
+        "item-3-b"
+      ],
+      "numericValue": 3750,
+      "textValue": "Diagnostic Order Result textValue configuration (3)",
+      "unit": "Diagnostic Order Result unit configuration (3)",
+      "refRangeLow": 30,
+      "refRangeHigh": 30,
+      "abnormalFlag": "Diagnostic Order Result abnormalFlag configuration (3)",
+      "narrativeImpression": "Diagnostic Order Result narrativeImpression configuration (3)",
+      "curesActReleaseHoldReason": "Diagnostic Order Result curesActReleaseHoldReason configuration (3)",
+      "reviewedByProviderAt": "2026-11-03T10:00:00Z",
+      "status": "COMPLETED",
+      "version": 3,
+      "isDeleted": false
+    }
+  ],
+  "HltCarePlanQualityGap": [
+    {
+      "id": "00000000-0151-0010-0000-000000000001",
+      "itemType": "Care Plan Quality Gap itemType configuration (1)",
+      "measureOrCvxCode": "HCPQ-2026-0001",
+      "title": "Care Plan Quality Gap #1 — Enterprise Primary Record",
+      "targetMetricText": "Care Plan Quality Gap targetMetricText configuration (1)",
+      "dueDate": "2026-11-01T10:00:00Z",
+      "closedAt": "2026-11-01T10:00:00Z",
+      "closureEvidenceRef": "Care Plan Quality Gap closureEvidenceRef configuration (1)",
+      "status": "ACTIVE",
+      "version": 1,
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0010-0000-000000000002",
+      "itemType": "Care Plan Quality Gap itemType configuration (2)",
+      "measureOrCvxCode": "HCPQ-2026-0002",
+      "title": "Care Plan Quality Gap #2 — Enterprise Operations Record",
+      "targetMetricText": "Care Plan Quality Gap targetMetricText configuration (2)",
+      "dueDate": "2026-11-02T10:00:00Z",
+      "closedAt": "2026-11-02T10:00:00Z",
+      "closureEvidenceRef": "Care Plan Quality Gap closureEvidenceRef configuration (2)",
+      "status": "IN_PROGRESS",
+      "version": 2,
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0010-0000-000000000003",
+      "itemType": "Care Plan Quality Gap itemType configuration (3)",
+      "measureOrCvxCode": "HCPQ-2026-0003",
+      "title": "Care Plan Quality Gap #3 — Enterprise Compliance Record",
+      "targetMetricText": "Care Plan Quality Gap targetMetricText configuration (3)",
+      "dueDate": "2026-11-03T10:00:00Z",
+      "closedAt": "2026-11-03T10:00:00Z",
+      "closureEvidenceRef": "Care Plan Quality Gap closureEvidenceRef configuration (3)",
+      "status": "COMPLETED",
+      "version": 3,
+      "isDeleted": false
+    }
+  ],
+  "HltFhirExchangeBreakGlassLog": [
+    {
+      "id": "00000000-0151-0011-0000-000000000001",
+      "recordKind": "Fhir Exchange Break Glass Log recordKind configuration (1)",
+      "externalSourceSystem": "Fhir Exchange Break Glass Log externalSourceSystem configuration (1)",
+      "fhirResourceSummary": "Fhir Exchange Break Glass Log fhirResourceSummary configuration (1)",
+      "reconciliationStatus": "Fhir Exchange Break Glass Log reconciliationStatus configuration (1)",
+      "breakGlassReasonCode": "HFEB-2026-0001",
+      "breakGlassJustification": "Fhir Exchange Break Glass Log breakGlassJustification configuration (1)",
+      "grantExpiresAt": "2026-11-01T10:00:00Z",
+      "occurredAt": "2026-11-01T10:00:00Z",
+      "version": 1,
+      "status": "ACTIVE",
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0011-0000-000000000002",
+      "recordKind": "Fhir Exchange Break Glass Log recordKind configuration (2)",
+      "externalSourceSystem": "Fhir Exchange Break Glass Log externalSourceSystem configuration (2)",
+      "fhirResourceSummary": "Fhir Exchange Break Glass Log fhirResourceSummary configuration (2)",
+      "reconciliationStatus": "Fhir Exchange Break Glass Log reconciliationStatus configuration (2)",
+      "breakGlassReasonCode": "HFEB-2026-0002",
+      "breakGlassJustification": "Fhir Exchange Break Glass Log breakGlassJustification configuration (2)",
+      "grantExpiresAt": "2026-11-02T10:00:00Z",
+      "occurredAt": "2026-11-02T10:00:00Z",
+      "version": 2,
+      "status": "IN_PROGRESS",
+      "isDeleted": false
+    },
+    {
+      "id": "00000000-0151-0011-0000-000000000003",
+      "recordKind": "Fhir Exchange Break Glass Log recordKind configuration (3)",
+      "externalSourceSystem": "Fhir Exchange Break Glass Log externalSourceSystem configuration (3)",
+      "fhirResourceSummary": "Fhir Exchange Break Glass Log fhirResourceSummary configuration (3)",
+      "reconciliationStatus": "Fhir Exchange Break Glass Log reconciliationStatus configuration (3)",
+      "breakGlassReasonCode": "HFEB-2026-0003",
+      "breakGlassJustification": "Fhir Exchange Break Glass Log breakGlassJustification configuration (3)",
+      "grantExpiresAt": "2026-11-03T10:00:00Z",
+      "occurredAt": "2026-11-03T10:00:00Z",
+      "version": 3,
+      "status": "COMPLETED",
+      "isDeleted": false
+    }
+  ]
+}

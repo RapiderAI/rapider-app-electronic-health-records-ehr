@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapider Electronic Health Records</title>
+  <script src="https://kit.fontawesome.com/5b23df26dc.js" crossorigin="anonymous" defer></script>
+  <script src="/assets/js/rapider-components.js" defer></script>
+  <link rel="stylesheet" href="/assets/themes/rapider-tailwind-theme.css">
+  <link rel="stylesheet" href="/assets/themes/crm-expenses-design.css">
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; }
+    iframe#appFrame { width: 100%; height: 100%; border: none; }
+  </style>
+</head>
+<body>
+  <iframe id="appFrame" src="pages/clinical-cockpit/clinical-cockpit.html"></iframe>
+  <script>
+    const routes = {
+  "clinical-cockpit": "pages/clinical-cockpit/clinical-cockpit.html",
+  "patient-directory": "pages/patient-directory/patient-directory.html",
+  "encounters-board": "pages/encounters-board/encounters-board.html",
+  "medications-erx": "pages/medications-erx/medications-erx.html",
+  "diagnostic-orders": "pages/diagnostic-orders/diagnostic-orders.html",
+  "problems-allergies": "pages/problems-allergies/problems-allergies.html",
+  "care-plans-quality": "pages/care-plans-quality/care-plans-quality.html",
+  "fhir-interoperability": "pages/fhir-interoperability/fhir-interoperability.html",
+  "hipaa-break-glass": "pages/hipaa-break-glass/hipaa-break-glass.html",
+  "patient-chart-360": "pages/patient-chart-360/patient-chart-360.html",
+  "encounter-charting": "pages/encounter-charting/encounter-charting.html",
+  "order-rx-drawer": "pages/order-rx-drawer/order-rx-drawer.html"
+};
+    function handleHash() {
+      const hash = window.location.hash.replace(/^#\/?/, '').split('?')[0];
+      const route = hash || 'clinical-cockpit';
+      const target = routes[route] || routes['clinical-cockpit'];
+      const iframe = document.getElementById('appFrame');
+      if (iframe) iframe.src = target;
+    }
+    window.addEventListener('hashchange', handleHash);
+    window.addEventListener('load', handleHash);
+  </script>
+</body>
+</html>
