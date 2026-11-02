@@ -4,8 +4,8 @@
   "appName": "Rapider Electronic Health Records",
   "repository": "",
   "version": "1.0.0",
-  "lastBuildTimestamp": "2026-11-01T12:07:59.951Z",
-  "lastCommit": "5a48b83",
+  "lastBuildTimestamp": "2026-11-02T09:48:35.664Z",
+  "lastCommit": "eedc691",
   "summary": {
     "status": "qa_passed",
     "complianceRate": 100,
@@ -18,147 +18,147 @@
     "failedQaPasses": 0,
     "e2eSuitesCount": 0,
     "e2ePassedCount": 0,
-    "lastFullAudit": "2026-11-01T12:07:59.951Z",
+    "lastFullAudit": "2026-11-02T09:48:35.664Z",
     "lastE2ERun": null
   },
   "qaPasses": {
     "pass-01-routing": {
       "name": "pass-01-routing",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-02-swr": {
       "name": "pass-02-swr",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-03-data-models": {
       "name": "pass-03-data-models",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-04-modals": {
       "name": "pass-04-modals",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-05-drawers": {
       "name": "pass-05-drawers",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-06-responsive": {
       "name": "pass-06-responsive",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-07-themes": {
       "name": "pass-07-themes",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-08-notifications": {
       "name": "pass-08-notifications",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-09-payloads": {
       "name": "pass-09-payloads",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-10-components": {
       "name": "pass-10-components",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-11-e2e-expectations": {
       "name": "pass-11-e2e-expectations",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-12-asset-externalization": {
       "name": "pass-12-asset-externalization",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-13-manifest-sync": {
       "name": "pass-13-manifest-sync",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-14-ui-states": {
       "name": "pass-14-ui-states",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-15-security": {
       "name": "pass-15-security",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-16-accessibility": {
       "name": "pass-16-accessibility",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-17-input-formatting": {
       "name": "pass-17-input-formatting",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-18-kanban-list-views": {
       "name": "pass-18-kanban-list-views",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-19-ui-best-practices": {
       "name": "pass-19-ui-best-practices",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     },
     "pass-20-search-filters": {
       "name": "pass-20-search-filters",
       "status": "passed",
-      "lastRun": "2026-11-01T12:07:59.951Z",
+      "lastRun": "2026-11-02T09:48:35.664Z",
       "pagesCovered": 12,
       "issuesFound": 0
     }
@@ -167,408 +167,258 @@
     "pages/clinical-cockpit/clinical-cockpit.html": {
       "pageName": "Provider Clinical Cockpit",
       "route": "clinical-cockpit",
-      "fileHash": "sha256:09b0704a2ea0670d2c6e338500ce226adf960106e99bbb0cd94f77daa0fec683",
-      "lastModified": "2026-11-01T12:07:59.832Z",
-      "lastTested": "2026-11-01T12:07:59.951Z",
+      "fileHash": "sha256:78d199c380b562c4e7582584bc30222dc30bb5edf9ec7cd7abd2553453054543",
+      "lastModified": "2026-11-02T09:48:35.523Z",
+      "lastTested": "2026-11-02T09:48:35.664Z",
       "status": "passed",
       "metrics": {
-        "buttonsTotal": 8,
-        "buttonsWithActions": 8,
+        "buttonsTotal": 6,
+        "buttonsWithActions": 6,
         "deadButtons": 0,
-        "linksTotal": 12,
-        "linksValid": 12,
+        "linksTotal": 14,
+        "linksValid": 14,
         "nativeAlerts": 0,
         "contrastCompliant": true,
-        "swrCalls": 2,
-        "modalsTotal": 1
+        "swrCalls": 0,
+        "modalsTotal": 0
       },
       "issues": [],
-      "warnings": [
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_LIGHT_BACKGROUND",
-          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
-          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
-        },
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_DARK_TEXT",
-          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
-          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
-        }
-      ]
+      "warnings": []
     },
     "pages/patient-directory/patient-directory.html": {
       "pageName": "Master Patient Directory",
       "route": "patient-directory",
-      "fileHash": "sha256:ed87b8615c6d9dce7f5ec2dca1d8061fa0283c500ed4efe9cd53095b42d7d474",
-      "lastModified": "2026-11-01T12:07:59.832Z",
-      "lastTested": "2026-11-01T12:07:59.951Z",
+      "fileHash": "sha256:833e4fb34633890b8206b8cbe5415b27045953edf95de7ed6caf716ba39defcf",
+      "lastModified": "2026-11-02T09:48:35.524Z",
+      "lastTested": "2026-11-02T09:48:35.664Z",
       "status": "passed",
       "metrics": {
-        "buttonsTotal": 8,
-        "buttonsWithActions": 8,
+        "buttonsTotal": 6,
+        "buttonsWithActions": 6,
         "deadButtons": 0,
-        "linksTotal": 12,
-        "linksValid": 12,
+        "linksTotal": 14,
+        "linksValid": 14,
         "nativeAlerts": 0,
         "contrastCompliant": true,
-        "swrCalls": 2,
-        "modalsTotal": 1
+        "swrCalls": 0,
+        "modalsTotal": 0
       },
       "issues": [],
-      "warnings": [
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_LIGHT_BACKGROUND",
-          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
-          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
-        },
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_DARK_TEXT",
-          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
-          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
-        }
-      ]
+      "warnings": []
     },
     "pages/encounters-board/encounters-board.html": {
       "pageName": "Clinical Encounters & Sign-Off",
       "route": "encounters-board",
-      "fileHash": "sha256:d8e0f0b9472d170dfb41e98a37a71a3d7789bb4224e5084655de4dfd331a3769",
-      "lastModified": "2026-11-01T12:07:59.833Z",
-      "lastTested": "2026-11-01T12:07:59.951Z",
+      "fileHash": "sha256:464f748bda5a5fbb38977037ccddbd227bc39342c5131a9d36ae79f9539a9032",
+      "lastModified": "2026-11-02T09:48:35.524Z",
+      "lastTested": "2026-11-02T09:48:35.664Z",
       "status": "passed",
       "metrics": {
-        "buttonsTotal": 8,
-        "buttonsWithActions": 8,
+        "buttonsTotal": 6,
+        "buttonsWithActions": 6,
         "deadButtons": 0,
-        "linksTotal": 12,
-        "linksValid": 12,
+        "linksTotal": 14,
+        "linksValid": 14,
         "nativeAlerts": 0,
         "contrastCompliant": true,
-        "swrCalls": 2,
-        "modalsTotal": 1
+        "swrCalls": 0,
+        "modalsTotal": 0
       },
       "issues": [],
-      "warnings": [
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_LIGHT_BACKGROUND",
-          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
-          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
-        },
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_DARK_TEXT",
-          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
-          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
-        }
-      ]
+      "warnings": []
     },
     "pages/medications-erx/medications-erx.html": {
       "pageName": "Medications & e-Prescribing",
       "route": "medications-erx",
-      "fileHash": "sha256:2a01299e16f56ef826133381c3168cef17ae06f928c92e1848d6106ccc2cb8bf",
-      "lastModified": "2026-11-01T12:07:59.833Z",
-      "lastTested": "2026-11-01T12:07:59.951Z",
+      "fileHash": "sha256:b0770e315e21357b0dec703d167ca6dafb3ca108f0b6d80eb6f44a534dd5f200",
+      "lastModified": "2026-11-02T09:48:35.525Z",
+      "lastTested": "2026-11-02T09:48:35.664Z",
       "status": "passed",
       "metrics": {
-        "buttonsTotal": 8,
-        "buttonsWithActions": 8,
+        "buttonsTotal": 6,
+        "buttonsWithActions": 6,
         "deadButtons": 0,
-        "linksTotal": 12,
-        "linksValid": 12,
+        "linksTotal": 14,
+        "linksValid": 14,
         "nativeAlerts": 0,
         "contrastCompliant": true,
-        "swrCalls": 2,
-        "modalsTotal": 1
+        "swrCalls": 0,
+        "modalsTotal": 0
       },
       "issues": [],
-      "warnings": [
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_LIGHT_BACKGROUND",
-          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
-          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
-        },
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_DARK_TEXT",
-          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
-          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
-        }
-      ]
+      "warnings": []
     },
     "pages/diagnostic-orders/diagnostic-orders.html": {
       "pageName": "Lab & Imaging Orders (CPOE)",
       "route": "diagnostic-orders",
-      "fileHash": "sha256:f0677e904b9f8b0759a3a0b3eed37ccbc4386972321515e573f487bd696b9e1c",
-      "lastModified": "2026-11-01T12:07:59.834Z",
-      "lastTested": "2026-11-01T12:07:59.951Z",
+      "fileHash": "sha256:16f46f4d7f7efb4876c6708df30971176e7da1e4e0b4f84ef46e794693373978",
+      "lastModified": "2026-11-02T09:48:35.526Z",
+      "lastTested": "2026-11-02T09:48:35.664Z",
       "status": "passed",
       "metrics": {
-        "buttonsTotal": 8,
-        "buttonsWithActions": 8,
-        "deadButtons": 0,
-        "linksTotal": 12,
-        "linksValid": 12,
-        "nativeAlerts": 0,
-        "contrastCompliant": true,
-        "swrCalls": 2,
-        "modalsTotal": 1
-      },
-      "issues": [],
-      "warnings": [
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_LIGHT_BACKGROUND",
-          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
-          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
-        },
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_DARK_TEXT",
-          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
-          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
-        }
-      ]
-    },
-    "pages/problems-allergies/problems-allergies.html": {
-      "pageName": "Problems & Allergy Safety",
-      "route": "problems-allergies",
-      "fileHash": "sha256:5a67670f1db8cb3a528aad96e971db7b1f253a63ec6443f8aac454145a9157ad",
-      "lastModified": "2026-11-01T12:07:59.834Z",
-      "lastTested": "2026-11-01T12:07:59.951Z",
-      "status": "passed",
-      "metrics": {
-        "buttonsTotal": 8,
-        "buttonsWithActions": 8,
-        "deadButtons": 0,
-        "linksTotal": 12,
-        "linksValid": 12,
-        "nativeAlerts": 0,
-        "contrastCompliant": true,
-        "swrCalls": 2,
-        "modalsTotal": 1
-      },
-      "issues": [],
-      "warnings": [
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_LIGHT_BACKGROUND",
-          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
-          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
-        },
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_DARK_TEXT",
-          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
-          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
-        }
-      ]
-    },
-    "pages/care-plans-quality/care-plans-quality.html": {
-      "pageName": "Care Plans & Quality Gaps",
-      "route": "care-plans-quality",
-      "fileHash": "sha256:b4089a547f4859ffb291fbf0a039e82bcabc8b6e830afbf41a0a38a1471034c9",
-      "lastModified": "2026-11-01T12:07:59.835Z",
-      "lastTested": "2026-11-01T12:07:59.951Z",
-      "status": "passed",
-      "metrics": {
-        "buttonsTotal": 8,
-        "buttonsWithActions": 8,
-        "deadButtons": 0,
-        "linksTotal": 12,
-        "linksValid": 12,
-        "nativeAlerts": 0,
-        "contrastCompliant": true,
-        "swrCalls": 2,
-        "modalsTotal": 1
-      },
-      "issues": [],
-      "warnings": [
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_LIGHT_BACKGROUND",
-          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
-          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
-        },
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_DARK_TEXT",
-          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
-          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
-        }
-      ]
-    },
-    "pages/fhir-interoperability/fhir-interoperability.html": {
-      "pageName": "FHIR & HIE Exchange Hub",
-      "route": "fhir-interoperability",
-      "fileHash": "sha256:f95bacb0608e047e48dcd1ebddbef9fb19fbc7ce976f2611550e119842006714",
-      "lastModified": "2026-11-01T12:07:59.835Z",
-      "lastTested": "2026-11-01T12:07:59.951Z",
-      "status": "passed",
-      "metrics": {
-        "buttonsTotal": 8,
-        "buttonsWithActions": 8,
-        "deadButtons": 0,
-        "linksTotal": 12,
-        "linksValid": 12,
-        "nativeAlerts": 0,
-        "contrastCompliant": true,
-        "swrCalls": 2,
-        "modalsTotal": 1
-      },
-      "issues": [],
-      "warnings": [
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_LIGHT_BACKGROUND",
-          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
-          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
-        },
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_DARK_TEXT",
-          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
-          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
-        }
-      ]
-    },
-    "pages/hipaa-break-glass/hipaa-break-glass.html": {
-      "pageName": "Clinical Audit & Break-Glass",
-      "route": "hipaa-break-glass",
-      "fileHash": "sha256:2912e257cbd506c1ae8cd62865f5463979922b39ee2cefd8eca9f2dd578bd08f",
-      "lastModified": "2026-11-01T12:07:59.835Z",
-      "lastTested": "2026-11-01T12:07:59.951Z",
-      "status": "passed",
-      "metrics": {
-        "buttonsTotal": 8,
-        "buttonsWithActions": 8,
-        "deadButtons": 0,
-        "linksTotal": 12,
-        "linksValid": 12,
-        "nativeAlerts": 0,
-        "contrastCompliant": true,
-        "swrCalls": 2,
-        "modalsTotal": 1
-      },
-      "issues": [],
-      "warnings": [
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_LIGHT_BACKGROUND",
-          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
-          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
-        },
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_DARK_TEXT",
-          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
-          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
-        }
-      ]
-    },
-    "pages/patient-chart-360/patient-chart-360.html": {
-      "pageName": "Patient Longitudinal Chart 360",
-      "route": "patient-chart-360",
-      "fileHash": "sha256:e4795ee92880f10dc1d78f1e570754f356200a4a1c992ec57f6031baee568d26",
-      "lastModified": "2026-11-01T12:07:59.836Z",
-      "lastTested": "2026-11-01T12:07:59.951Z",
-      "status": "passed",
-      "metrics": {
-        "buttonsTotal": 9,
-        "buttonsWithActions": 9,
-        "deadButtons": 0,
-        "linksTotal": 14,
-        "linksValid": 14,
-        "nativeAlerts": 0,
-        "contrastCompliant": true,
-        "swrCalls": 0,
-        "modalsTotal": 1
-      },
-      "issues": [],
-      "warnings": [
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_LIGHT_BACKGROUND",
-          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
-          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
-        },
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_DARK_TEXT",
-          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
-          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
-        }
-      ]
-    },
-    "pages/encounter-charting/encounter-charting.html": {
-      "pageName": "SOAP Encounter & Ambient Scribe",
-      "route": "encounter-charting",
-      "fileHash": "sha256:381fa047c233663a4f6eaf822638d8aff85b84954b8bb45aa6dc640ce041abc0",
-      "lastModified": "2026-11-01T12:07:59.836Z",
-      "lastTested": "2026-11-01T12:07:59.951Z",
-      "status": "passed",
-      "metrics": {
-        "buttonsTotal": 9,
-        "buttonsWithActions": 9,
-        "deadButtons": 0,
-        "linksTotal": 14,
-        "linksValid": 14,
-        "nativeAlerts": 0,
-        "contrastCompliant": true,
-        "swrCalls": 0,
-        "modalsTotal": 1
-      },
-      "issues": [],
-      "warnings": [
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_LIGHT_BACKGROUND",
-          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
-          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
-        },
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_DARK_TEXT",
-          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
-          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
-        }
-      ]
-    },
-    "pages/order-rx-drawer/order-rx-drawer.html": {
-      "pageName": "New CPOE Order / eRx Drawer",
-      "route": "order-rx-drawer",
-      "fileHash": "sha256:5939e328132a8dbfb399ffd47e65e776792c5091856b4119cfbeee507e94f70d",
-      "lastModified": "2026-11-01T12:07:59.837Z",
-      "lastTested": "2026-11-01T12:07:59.951Z",
-      "status": "passed",
-      "metrics": {
-        "buttonsTotal": 7,
-        "buttonsWithActions": 7,
+        "buttonsTotal": 6,
+        "buttonsWithActions": 6,
         "deadButtons": 0,
         "linksTotal": 14,
         "linksValid": 14,
         "nativeAlerts": 0,
         "contrastCompliant": true,
         "swrCalls": 1,
-        "modalsTotal": 1
+        "modalsTotal": 0
+      },
+      "issues": [],
+      "warnings": []
+    },
+    "pages/problems-allergies/problems-allergies.html": {
+      "pageName": "Problems & Allergy Safety",
+      "route": "problems-allergies",
+      "fileHash": "sha256:6d1d4f00600e601d2a1fd9c4040df12e3f1cba02850e2389c0041926c7bdf380",
+      "lastModified": "2026-11-02T09:48:35.526Z",
+      "lastTested": "2026-11-02T09:48:35.664Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 6,
+        "buttonsWithActions": 6,
+        "deadButtons": 0,
+        "linksTotal": 14,
+        "linksValid": 14,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 1,
+        "modalsTotal": 0
+      },
+      "issues": [],
+      "warnings": []
+    },
+    "pages/care-plans-quality/care-plans-quality.html": {
+      "pageName": "Care Plans & Quality Gaps",
+      "route": "care-plans-quality",
+      "fileHash": "sha256:47954a99ad6f4e2045fc538216ff9d427b3aaf81c999951844d0f7d70fce0b97",
+      "lastModified": "2026-11-02T09:48:35.527Z",
+      "lastTested": "2026-11-02T09:48:35.664Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 6,
+        "buttonsWithActions": 6,
+        "deadButtons": 0,
+        "linksTotal": 14,
+        "linksValid": 14,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 1,
+        "modalsTotal": 0
+      },
+      "issues": [],
+      "warnings": []
+    },
+    "pages/fhir-interoperability/fhir-interoperability.html": {
+      "pageName": "FHIR & HIE Exchange Hub",
+      "route": "fhir-interoperability",
+      "fileHash": "sha256:4cafb8e44adf3b806d7ee8be5ea92e7c40d519d22c3578e2df41e202eccdf7a3",
+      "lastModified": "2026-11-02T09:48:35.528Z",
+      "lastTested": "2026-11-02T09:48:35.664Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 6,
+        "buttonsWithActions": 6,
+        "deadButtons": 0,
+        "linksTotal": 14,
+        "linksValid": 14,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 1,
+        "modalsTotal": 0
+      },
+      "issues": [],
+      "warnings": []
+    },
+    "pages/hipaa-break-glass/hipaa-break-glass.html": {
+      "pageName": "Clinical Audit & Break-Glass",
+      "route": "hipaa-break-glass",
+      "fileHash": "sha256:c27f80a5ff9504ded9389b9a9d114270632ca1e44a148e79c74ce5dbadf2d88b",
+      "lastModified": "2026-11-02T09:48:35.529Z",
+      "lastTested": "2026-11-02T09:48:35.664Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 6,
+        "buttonsWithActions": 6,
+        "deadButtons": 0,
+        "linksTotal": 14,
+        "linksValid": 14,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 1,
+        "modalsTotal": 0
+      },
+      "issues": [],
+      "warnings": []
+    },
+    "pages/patient-chart-360/patient-chart-360.html": {
+      "pageName": "Patient Longitudinal Chart 360",
+      "route": "patient-chart-360",
+      "fileHash": "sha256:d2f98c1923e0bcd68bc8511f6d1b9ba5e8a020595955ad38c348fcb2ba61e860",
+      "lastModified": "2026-11-02T09:48:35.530Z",
+      "lastTested": "2026-11-02T09:48:35.664Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 5,
+        "buttonsWithActions": 5,
+        "deadButtons": 0,
+        "linksTotal": 15,
+        "linksValid": 15,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 0,
+        "modalsTotal": 0
+      },
+      "issues": [],
+      "warnings": []
+    },
+    "pages/encounter-charting/encounter-charting.html": {
+      "pageName": "SOAP Encounter & Ambient Scribe",
+      "route": "encounter-charting",
+      "fileHash": "sha256:d1d0ee407b59842462e1e06ef9298b1fd3b38cfab902ad505ecc3aed4d2d80f5",
+      "lastModified": "2026-11-02T09:48:35.530Z",
+      "lastTested": "2026-11-02T09:48:35.664Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 5,
+        "buttonsWithActions": 5,
+        "deadButtons": 0,
+        "linksTotal": 15,
+        "linksValid": 15,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 0,
+        "modalsTotal": 0
+      },
+      "issues": [],
+      "warnings": []
+    },
+    "pages/order-rx-drawer/order-rx-drawer.html": {
+      "pageName": "New CPOE Order / eRx Drawer",
+      "route": "order-rx-drawer",
+      "fileHash": "sha256:52433ae71c8abe9013cc8f0beb962d9de3ce2c94faf7729b25f554c63f0070b9",
+      "lastModified": "2026-11-02T09:48:35.531Z",
+      "lastTested": "2026-11-02T09:48:35.664Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 9,
+        "buttonsWithActions": 9,
+        "deadButtons": 0,
+        "linksTotal": 13,
+        "linksValid": 13,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 1,
+        "modalsTotal": 0
       },
       "issues": [],
       "warnings": [
         {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_LIGHT_BACKGROUND",
-          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
-          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
-        },
-        {
-          "rule": "Pass 11: Dark & Light Theme Compliance",
-          "type": "HARDCODED_DARK_TEXT",
-          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
-          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
+          "rule": "Pass 04: Modals Usage (Universal Dismissal)",
+          "type": "MODAL_DISMISSAL_MISSING",
+          "message": "Modal element detected, but script lacks standard backdrop click dismissal or Escape key listener to close active overlays."
         }
       ]
     }
@@ -580,6 +430,16 @@
     "suites": []
   },
   "history": [
+    {
+      "timestamp": "2026-11-02T09:48:35.664Z",
+      "action": "qa_full_audit",
+      "commit": "eedc691",
+      "complianceRate": 100,
+      "pagesAudited": 12,
+      "status": "passed",
+      "agent": "Antigravity",
+      "details": "12/12 pages passed. Completed 20/20 QA passes."
+    },
     {
       "timestamp": "2026-11-01T12:07:59.951Z",
       "action": "qa_full_audit",
